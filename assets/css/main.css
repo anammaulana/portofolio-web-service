@@ -8,7 +8,8 @@
   }
 
   body {
-    @apply bg-paper text-ink antialiased dark:bg-[#14161a] dark:text-white;
+    @apply bg-paper text-ink antialiased dark:bg-[#101317] dark:text-white;
+    text-rendering: optimizeLegibility;
   }
 
   a,
@@ -20,5 +21,17 @@
 @layer components {
   .container-shell {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-surface {
+    @apply border-y border-line/80 bg-paper dark:border-white/10 dark:bg-[#101317];
+  }
+
+  .panel-surface {
+    @apply border border-line/80 bg-white shadow-[0_20px_70px_rgba(21,21,21,0.08)] dark:border-white/10 dark:bg-white/10 dark:shadow-none;
+  }
+
+  .muted-copy {
+    @apply text-ink/70 dark:text-white/70;
   }
 }

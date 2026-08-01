@@ -95,11 +95,13 @@ Decisions:
 - 2026-08-01: Scofield performed Sprint 2 verification because a separate `qa` specialist agent was not available in the current environment. Verdict: PASS WITH NOTES.
 - 2026-08-01: Owner requested `REVISION RESULT` for Sprint 2 because the public GitHub history still included the old workspace initialization commit `fcd635b Initialize Scofield AI freelance workspace`; correction scope is to clean the project Git history and keep `origin` on `https://github.com/anammaulana/portofolio-web-service.git`.
 - 2026-08-01: Sprint 2 revision completed by force-pushing a clean project-only `main` history to `https://github.com/anammaulana/portofolio-web-service.git`; latest remote commit after correction is `79a401e`.
+- 2026-08-01: Owner requested another `REVISION RESULT` before next sprint: improve the UI to look more attractive and professional, and use temporary content/media from Google CDN where appropriate.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
 - Nuxt dev server may emit repeated `#app-manifest` pre-transform error logs after `npm run dev` and page request. QA assessed this as low severity and non-blocking because `/` returns HTTP 200 and tests/build pass.
 - Production build may emit dependency deprecation warning `DEP0155` from the dependency tree. QA assessed this as low severity and non-blocking.
+- Temporary Google CDN visual placeholders must be replaced with brand-owned or approved production assets before final launch.
 
 Known risks:
 - Four one-day sprints are tight because the scope includes marketing pages, portfolio, blog, SEO, structured data, performance, tests, and documentation.
@@ -298,4 +300,20 @@ Sprint 2 revision result:
 - Old workspace-root commit `fcd635b` is no longer in the `origin/main` ancestry after the force-with-lease update.
 - Local `projects/anam-web-studio` is now initialized as its own Git repository with `origin` set to `https://github.com/anammaulana/portofolio-web-service.git` and `main` tracking `origin/main`.
 - Verification after correction: `npm run build` PASS; `npm run test` PASS on rerun after avoiding parallel Nuxt lock.
+- Remaining notes: Nuxt `#app-manifest` dev-server log and dependency `DEP0155` warning remain non-blocking.
+
+Sprint 2 UI revision request:
+- Owner requested UI improvements before approving Sprint 2 result and before moving to the next sprint.
+- Scope: make the current Sprint 2 UI more attractive and professional, improve content presentation hierarchy, and use temporary Google CDN-hosted visual placeholders where suitable.
+- Out of scope: Sprint 3 portfolio/blog/advanced SEO work, fake testimonials, fake client results, production asset procurement, and deployment.
+
+Sprint 2 UI revision result:
+- Added Google Fonts CDN preconnect/stylesheet for Inter via `fonts.googleapis.com` and `fonts.gstatic.com`.
+- Added temporary Google-hosted visual placeholders from `www.gstatic.com` to the homepage hero, portfolio placeholder cards, and About page.
+- Refined homepage hero with stronger layout, proof-point chips, premium visual panel, and clearer CTA hierarchy.
+- Polished benefit, services, portfolio, process, final CTA, About, Services, and Pricing presentation using reusable surface utilities.
+- Updated homepage content copy to sound more professional while preserving scope safety and avoiding unverified claims.
+- Updated unit coverage to assert Google CDN placeholder usage.
+- Visual verification: desktop 1440px and mobile 360px screenshots were checked; no obvious text/CTA overlap was found.
+- Verification after revision: `npm run build` PASS; `npm run test` PASS with unit 4/4 and Playwright Chromium 5/5.
 - Remaining notes: Nuxt `#app-manifest` dev-server log and dependency `DEP0155` warning remain non-blocking.

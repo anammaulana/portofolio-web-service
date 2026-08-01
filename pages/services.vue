@@ -10,17 +10,24 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="bg-paper py-16 dark:bg-[#14161a] sm:py-20">
+  <section class="section-surface py-16 sm:py-20">
     <div class="container-shell">
       <UiSectionHeader eyebrow="Layanan" :title="content.title" :description="content.description" />
       <div class="mt-10 grid gap-4 md:grid-cols-2">
         <article
-          v-for="service in content.items"
+          v-for="(service, index) in content.items"
           :key="service.title"
-          class="rounded-lg border border-line bg-white p-6 dark:border-white/12 dark:bg-white/7"
+          class="panel-surface rounded-lg p-6"
         >
-          <h2 class="text-xl font-semibold text-ink dark:text-white">{{ service.title }}</h2>
-          <p class="mt-4 text-base leading-7 text-ink/70 dark:text-white/72">{{ service.description }}</p>
+          <div class="flex items-start gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-ocean text-sm font-bold text-white dark:bg-[#89c7dc] dark:text-ink">
+              0{{ index + 1 }}
+            </span>
+            <div>
+              <h2 class="text-xl font-semibold text-ink dark:text-white">{{ service.title }}</h2>
+              <p class="mt-4 text-base leading-7 muted-copy">{{ service.description }}</p>
+            </div>
+          </div>
         </article>
       </div>
     </div>

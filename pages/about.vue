@@ -10,24 +10,31 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="bg-paper py-16 dark:bg-[#14161a] sm:py-20">
+  <section class="bg-[linear-gradient(135deg,#faf8f4,#eef4f1)] py-16 dark:bg-[linear-gradient(135deg,#101317,#17231d)] sm:py-20">
     <div class="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-copper dark:text-[#f1a37f]">Tentang</p>
-        <h1 class="mt-4 text-4xl font-semibold leading-tight text-ink dark:text-white sm:text-5xl">
+        <p class="text-sm font-semibold uppercase text-copper dark:text-[#f1a37f]">Tentang</p>
+        <h1 class="mt-4 text-4xl font-bold leading-tight text-ink dark:text-white sm:text-5xl">
           {{ content.title }}
         </h1>
-        <p class="mt-5 text-lg leading-8 text-ink/72 dark:text-white/72">
+        <p class="mt-5 text-lg leading-8 muted-copy">
           {{ content.description }}
         </p>
+        <img
+          src="https://www.gstatic.com/webp/gallery/5.jpg"
+          alt="Visual sementara dari Google CDN untuk halaman tentang Anam Web Studio"
+          class="mt-8 h-64 w-full rounded-lg object-cover shadow-soft"
+          width="720"
+          height="420"
+        >
       </div>
       <div class="grid gap-4">
         <article
           v-for="value in content.values"
           :key="value"
-          class="rounded-lg border border-line bg-white p-6 dark:border-white/12 dark:bg-white/7"
+          class="panel-surface rounded-lg p-6"
         >
-          <p class="text-base leading-7 text-ink/78 dark:text-white/76">{{ value }}</p>
+          <p class="text-base leading-7 muted-copy">{{ value }}</p>
         </article>
       </div>
     </div>

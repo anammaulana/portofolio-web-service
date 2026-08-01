@@ -6,22 +6,31 @@ export const homeContent = {
   hero: {
     eyebrow: 'Website development service',
     title: 'Website profesional yang membuat bisnis terlihat siap dipercaya.',
-    description: 'Anam Web Studio membantu bisnis membangun website marketing yang jelas, responsif, SEO-friendly, dan mudah dikembangkan tanpa klaim berlebihan.',
+    description: 'Anam Web Studio membantu bisnis membangun website marketing yang terlihat matang, cepat dipahami, SEO-friendly, dan siap dikembangkan bertahap tanpa klaim berlebihan.',
     primaryCta: 'Mulai diskusi',
-    secondaryCta: 'Lihat pendekatan'
+    secondaryCta: 'Lihat pendekatan',
+    image: {
+      src: 'https://www.gstatic.com/webp/gallery/4.jpg',
+      alt: 'Ilustrasi visual sementara dari Google CDN untuk mood board website profesional'
+    }
   },
+  proofPoints: [
+    'Nuxt + TypeScript',
+    'SEO-ready structure',
+    'Mobile-first UI'
+  ],
   benefits: [
     {
-      title: 'Strategi pesan yang jelas',
-      description: 'Setiap section diarahkan untuk menjawab kebutuhan calon pelanggan, bukan sekadar memenuhi halaman.'
+      title: 'Pesan bisnis lebih tajam',
+      description: 'Setiap section diarahkan untuk membuat pengunjung paham siapa Anda, apa yang ditawarkan, dan langkah berikutnya.'
     },
     {
-      title: 'Fondasi teknis modern',
-      description: 'Dibangun dengan Nuxt, TypeScript, dan Tailwind agar cepat, rapi, serta siap dikembangkan bertahap.'
+      title: 'UI premium yang ringan',
+      description: 'Visual dibuat bersih, modern, dan cepat dimuat dengan komponen Nuxt yang mudah dirawat.'
     },
     {
-      title: 'Pengalaman mobile-first',
-      description: 'Layout, navigasi, dan CTA disiapkan nyaman digunakan mulai dari layar kecil 360px.'
+      title: 'Konversi tetap natural',
+      description: 'CTA, pricing, FAQ, dan kontak disusun untuk konsultasi yang jelas tanpa janji palsu atau tekanan berlebihan.'
     }
   ],
   services: [

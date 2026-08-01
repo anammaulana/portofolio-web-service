@@ -8,6 +8,8 @@ describe('home content baseline', () => {
     expect(homeContent.seo.title).toContain('Anam Web Studio')
     expect(homeContent.seo.description.toLowerCase()).toContain('website')
     expect(homeContent.benefits).toHaveLength(3)
+    expect(homeContent.proofPoints).toContain('Nuxt + TypeScript')
+    expect(homeContent.hero.image.src).toContain('gstatic.com')
     expect(homeContent.services.length).toBeGreaterThanOrEqual(4)
     expect(homeContent.process).toHaveLength(3)
     expect(homeContent.faqs.length).toBeGreaterThanOrEqual(3)

@@ -14,6 +14,7 @@ Nuxt 3 website foundation for Anam Web Studio's professional website development
 - Responsive navigation links for Sprint 2 pages from desktop and 360px mobile menu.
 - Persistent light/dark mode toggle with keyboard-accessible button and visible focus state.
 - Contact CTA reads `NUXT_PUBLIC_WHATSAPP_NUMBER` when configured and falls back to a safe local contact page placeholder.
+- Sprint 2 revision UI polish: premium hero layout, stronger content hierarchy, refined cards/sections, and temporary Google CDN-hosted visual placeholders.
 
 Out of scope: portfolio listing/detail, case studies, blog, sitemap, robots.txt, full structured data, production deployment, CMS/admin dashboard, payment gateway, backend CRM, paid anti-spam service, fake testimonials, fake client results, and unverified portfolio/client outcome claims.
 
@@ -79,11 +80,13 @@ Verified Sprint 2 behavior:
 - Light/dark mode toggle is visible, keyboard-accessible, and persists after reload through `localStorage`.
 - Navigation works on desktop and mobile at 360px minimum.
 - Unit and Playwright smoke tests cover Sprint 2 navigation, safe pricing content, and theme persistence.
+- Revision verification confirms the homepage and key conversion pages render with improved visual hierarchy and temporary `www.gstatic.com` assets without adding fake portfolio/testimonial claims.
 
 ## QA Notes
 
 - During development, Nuxt may emit repeated `#app-manifest` pre-transform error logs after `npm run dev` and a page request. This is a non-blocking Sprint 1 note because `/` returns HTTP 200 and the verified tests/build pass.
 - Production build may emit a `DEP0155` dependency warning from the dependency tree. This is a non-blocking Sprint 1 note.
+- Temporary visual placeholders are loaded from Google-hosted CDN URLs and should be replaced with brand/project-owned assets before production launch.
 
 ## Structure
 

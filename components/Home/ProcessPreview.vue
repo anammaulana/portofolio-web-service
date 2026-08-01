@@ -3,7 +3,7 @@ import { homeContent } from '~/content/home'
 </script>
 
 <template>
-  <section id="proses" class="border-y border-line bg-paper py-16 dark:border-white/12 dark:bg-[#14161a] sm:py-20" aria-labelledby="process-heading">
+  <section id="proses" class="section-surface py-16 sm:py-20" aria-labelledby="process-heading">
     <div class="container-shell">
       <UiSectionHeader
         id="process-heading"
@@ -14,11 +14,11 @@ import { homeContent } from '~/content/home'
         <article
           v-for="item in homeContent.process"
           :key="item.step"
-          class="rounded-lg bg-ink p-6 text-white dark:bg-white/8"
+          class="rounded-lg bg-ink p-6 text-white shadow-[0_22px_60px_rgba(21,21,21,0.16)] dark:bg-white/8 dark:shadow-none"
         >
-          <p class="text-sm font-semibold text-copper">{{ item.step }}</p>
+          <p class="text-sm font-semibold text-[#f1a37f]">{{ item.step }}</p>
           <h3 class="mt-8 text-xl font-semibold">{{ item.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-white/72">{{ item.description }}</p>
+          <p class="mt-3 text-sm leading-6 text-white/76">{{ item.description }}</p>
         </article>
       </div>
     </div>
