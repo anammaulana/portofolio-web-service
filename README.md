@@ -1,6 +1,6 @@
 # Anam Web Studio
 
-Nuxt website foundation for Anam Web Studio's professional website development service.
+Nuxt 3 website foundation for Anam Web Studio's professional website development service.
 
 ## Sprint 1 Scope
 
@@ -8,9 +8,10 @@ Nuxt website foundation for Anam Web Studio's professional website development s
 - Reusable layout, navigation, footer, UI components, homepage sections, and content data.
 - Homepage sections: hero, benefits/value message, services preview, portfolio placeholder, process preview, FAQ preview, and final CTA.
 - Homepage SEO title and meta description baseline.
+- Placeholder-only WhatsApp environment configuration.
 - Unit and e2e smoke tests for homepage render and navigation behavior.
 
-Out of scope for Sprint 1: detail pages, pricing, contact form, WhatsApp message generation, real portfolio claims, testimonials, blog flow, sitemap, robots, deployment, CMS/admin, and full Lighthouse certification.
+Out of scope for Sprint 1: About page, Services detail page, Pricing page, Contact page, quote form, WhatsApp message generation, real portfolio details, testimonials, blog flow, sitemap, robots, structured data, deployment, CMS/admin, and Lighthouse certification.
 
 ## Setup
 
@@ -24,6 +25,8 @@ Create a local `.env` only when needed. Do not commit it. Use `.env.example` as 
 ```env
 NUXT_PUBLIC_WHATSAPP_NUMBER=YOUR_WHATSAPP_NUMBER
 ```
+
+`YOUR_WHATSAPP_NUMBER` is a placeholder. Do not add real phone numbers, tokens, passwords, private keys, or production credentials to committed files.
 
 ## Development
 
@@ -51,6 +54,13 @@ Verified Sprint 1 behavior:
 - Homepage has exactly one primary `h1`.
 - Homepage title and meta description are customized for Anam Web Studio.
 - Portfolio area is a placeholder and does not claim fake testimonials, client names, or unverified results.
+- `.env.example` contains placeholder-only WhatsApp configuration.
+- Unit tests, Playwright e2e smoke tests, and production build are part of the verified Sprint 1 baseline.
+
+## QA Notes
+
+- During development, Nuxt may emit repeated `#app-manifest` pre-transform error logs after `npm run dev` and a page request. This is a non-blocking Sprint 1 note because `/` returns HTTP 200 and the verified tests/build pass.
+- Production build may emit a `DEP0155` dependency warning from the dependency tree. This is a non-blocking Sprint 1 note.
 
 ## Structure
 
@@ -70,4 +80,5 @@ tests/e2e/           Playwright tests
 
 - `.env` is ignored by git.
 - `.env.example` contains placeholders only.
-- No real phone number, tokens, API keys, passwords, private keys, or credentials are committed.
+- No real phone number, tokens, API keys, passwords, private keys, or credentials should be committed.
+- WhatsApp message generation and real contact wiring are not implemented in Sprint 1.
