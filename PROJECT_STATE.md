@@ -94,10 +94,10 @@ Decisions:
 - 2026-08-01: Sprint 2 implementation completed in commit `1981611` and pushed to the approved GitHub repository.
 - 2026-08-01: Scofield performed Sprint 2 verification because a separate `qa` specialist agent was not available in the current environment. Verdict: PASS WITH NOTES.
 - 2026-08-01: Owner requested `REVISION RESULT` for Sprint 2 because the public GitHub history still included the old workspace initialization commit `fcd635b Initialize Scofield AI freelance workspace`; correction scope is to clean the project Git history and keep `origin` on `https://github.com/anammaulana/portofolio-web-service.git`.
+- 2026-08-01: Sprint 2 revision completed by force-pushing a clean project-only `main` history to `https://github.com/anammaulana/portofolio-web-service.git`; latest remote commit after correction is `79a401e`.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
-- Sprint 2 revision required: clean GitHub `main` history for this project so old setup workspace commits are not part of the `portofolio-web-service` main branch.
 - Nuxt dev server may emit repeated `#app-manifest` pre-transform error logs after `npm run dev` and page request. QA assessed this as low severity and non-blocking because `/` returns HTTP 200 and tests/build pass.
 - Production build may emit dependency deprecation warning `DEP0155` from the dependency tree. QA assessed this as low severity and non-blocking.
 
@@ -248,7 +248,7 @@ Sprint 2 QA test scenario handoff:
 - Non-blocking notes may include dependency warnings that do not fail build/test or minor copy/visual polish issues that do not break business rules, contrast, or usability.
 
 Sprint 2 implementation handoff:
-- Sprint 2 completed in commit `1981611 feat: add sprint 2 business pages and theme toggle`.
+- Sprint 2 originally completed in commit `1981611 feat: add sprint 2 business pages and theme toggle`; after project-only history cleanup, the equivalent commit on remote `main` is `f707fd1`.
 - Project pushed successfully to `https://github.com/anammaulana/portofolio-web-service.git`.
 - Added pages: `/about`, `/services`, `/pricing`, `/process`, `/faq`, and `/contact`.
 - Centralized Sprint 2 business content in `content/business.ts`.
@@ -264,7 +264,7 @@ Sprint 2 verification result:
 - `npm run test` passed: unit 4/4 and Playwright Chromium 5/5.
 - `npm run build` passed after stopping the leftover Nuxt dev server from the earlier test run.
 - `git remote -v` confirms `origin` points to `https://github.com/anammaulana/portofolio-web-service.git`.
-- Latest commit: `1981611 feat: add sprint 2 business pages and theme toggle`.
+- Latest feature commit in clean project history: `f707fd1 feat: add sprint 2 business pages and theme toggle`.
 - Acceptance criteria 1-12 passed by local verification.
 - Non-blocking note: the first build rerun failed because a Nuxt dev server from Playwright was still active; after stopping only the project dev server processes, production build passed.
 - Non-blocking note: production build still emits dependency warning `DEP0155` from the dependency tree.
@@ -291,3 +291,11 @@ Sprint 2 revision request:
 - Owner requested revision before moving forward because the public repository history still showed commit `fcd635b Initialize Scofield AI freelance workspace`, which originated from the previous workspace/setup repository history.
 - Required correction: keep project remote as `https://github.com/anammaulana/portofolio-web-service.git`, create a clean `main` history from the current Anam Web Studio source tree, and push the corrected history to the approved project repository.
 - Out of scope: new feature work, Sprint 3 planning, UI refactor beyond Git/history cleanup, and changes to unrelated workspace directories.
+
+Sprint 2 revision result:
+- Correction completed: `main` on `https://github.com/anammaulana/portofolio-web-service.git` now points to clean project-only history, latest commit `79a401e chore: initialize anam web studio project`.
+- Remote root now contains project files directly: `package.json`, `app.vue`, `pages`, `components`, `content`, `layouts`, `tests`, and related Nuxt config files.
+- Old workspace-root commit `fcd635b` is no longer in the `origin/main` ancestry after the force-with-lease update.
+- Local `projects/anam-web-studio` is now initialized as its own Git repository with `origin` set to `https://github.com/anammaulana/portofolio-web-service.git` and `main` tracking `origin/main`.
+- Verification after correction: `npm run build` PASS; `npm run test` PASS on rerun after avoiding parallel Nuxt lock.
+- Remaining notes: Nuxt `#app-manifest` dev-server log and dependency `DEP0155` warning remain non-blocking.
