@@ -8,7 +8,7 @@ Approved requirement version: v1
 
 Current sprint: Sprint 4 - QA and Production Readiness
 
-Current status: WAITING_SPRINT_PLAN_APPROVAL
+Current status: IN PROGRESS - S4-QA-01 COMPLETE / IMPLEMENTATION READY
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
@@ -105,6 +105,8 @@ Decisions:
 - 2026-08-01: Scofield completed Sprint 3 implementation, verification, and documentation directly because dedicated specialist agents were not available in the current environment. Verdict: PASS WITH NOTES.
 - 2026-08-01: Owner approved Sprint 3 result via `APPROVE RESULT`.
 - 2026-08-01: Scofield prepared Sprint 4 plan and set status to WAITING_SPRINT_PLAN_APPROVAL. No Sprint 4 implementation delegated yet.
+- 2026-08-01: Owner approved Sprint 4 via `APPROVE SPRINT`.
+- 2026-08-01: Scofield completed S4-QA-01 test scenario preparation directly because dedicated QA agent was not available in the current environment.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -165,7 +167,7 @@ Sprint 1 acceptance criteria:
 11. Production build passes.
 12. README documents Sprint 1 setup and verified behavior after QA.
 
-Last Owner approval: 2026-08-01 - Sprint 3 result approved.
+Last Owner approval: 2026-08-01 - Sprint 4 approved.
 
 Sprint 1 QA test scenario handoff:
 - S1-QA-01 completed before implementation, as required by Owner.
@@ -173,7 +175,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Review Sprint 4 plan and reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+Next required Owner action: Wait for Sprint 4 implementation and verification handoff.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -463,3 +465,18 @@ Sprint 4 acceptance criteria:
 Sprint 4 approval gate:
 - STATUS: WAITING_SPRINT_PLAN_APPROVAL.
 - Required Owner response: `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+
+Sprint 4 QA test scenario handoff:
+- S4-QA-01 completed before implementation, as required by Owner workflow.
+- QA will verify Privacy Policy and Terms routes are navigable, readable in light/dark mode, and avoid legal overclaim.
+- QA will verify quote/contact form required validation for name, business type, project need, budget range, and timeline.
+- QA will verify honeypot/timing guard blocks suspicious submission without backend or paid service.
+- QA will verify WhatsApp message generation uses `NUXT_PUBLIC_WHATSAPP_NUMBER` and falls back safely when empty.
+- QA will verify no form data is persisted and no `.env`, secrets, generated output, fake proof, or private customer data are committed.
+- QA will verify structured data uses only factual placeholder-safe values and does not encode fake client proof.
+- QA will verify footer/nav links include legal pages and production-readiness pages remain responsive from 360px.
+- QA will verify final README handover notes cover setup, production env, test/build, deployment preparation, known limitations, and rollback.
+- Required post-implementation commands: `npm run test`, `npm run build`, `git status --short`, and route checks for `/privacy`, `/terms`, `/contact`, `/robots.txt`, `/sitemap.xml`, and a missing route.
+- Scope guard: Sprint 4 must not deploy, configure DNS/hosting, add backend CRM/database/email, add payment, add analytics, add admin dashboard, store real customer data, or claim real testimonials/logos/results.
+- Blockers include failed test/build, unsafe form persistence, unreadable dark mode form/legal content, fake structured data, missing fallback when WhatsApp number is empty, secrets committed, or Git remote mismatch.
+- Non-blocking notes may include Nuxt dev-server `#app-manifest` logs or dependency `DEP0155` warnings when commands still exit successfully.
