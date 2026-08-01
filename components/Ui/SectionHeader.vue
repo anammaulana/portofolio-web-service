@@ -14,7 +14,7 @@ defineProps<{
     <h2 class="mt-3 text-3xl font-semibold leading-tight text-ink dark:text-white sm:text-4xl">
       {{ title }}
     </h2>
-    <p v-if="description" class="mt-4 text-base leading-7 text-ink/70 dark:text-white/72 sm:text-lg">
+    <p v-if="description" class="mt-4 text-base leading-7 muted-copy sm:text-lg">
       {{ description }}
     </p>
   </div>

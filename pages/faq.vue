@@ -10,10 +10,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="bg-paper py-16 dark:bg-[#14161a] sm:py-20">
+  <section class="section-surface py-16 sm:py-20">
     <div class="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
       <UiSectionHeader eyebrow="FAQ" :title="content.title" />
-      <div class="divide-y divide-line rounded-lg border border-line bg-white dark:divide-white/12 dark:border-white/12 dark:bg-white/7">
+      <div class="divide-y divide-line rounded-lg border border-line bg-white dark:divide-white/15 dark:border-white/15 dark:bg-[#182027]">
         <details
           v-for="faq in content.items"
           :key="faq.question"
@@ -24,7 +24,7 @@ useSeoMeta({
             <span class="float-right pl-4 text-copper group-open:hidden dark:text-[#f1a37f]">+</span>
             <span class="float-right hidden pl-4 text-copper group-open:inline dark:text-[#f1a37f]">-</span>
           </summary>
-          <p class="mt-4 text-sm leading-6 text-ink/70 dark:text-white/72">{{ faq.answer }}</p>
+          <p class="mt-4 text-sm leading-6 muted-copy">{{ faq.answer }}</p>
         </details>
       </div>
     </div>

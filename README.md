@@ -81,6 +81,7 @@ Verified Sprint 2 behavior:
 - Navigation works on desktop and mobile at 360px minimum.
 - Unit and Playwright smoke tests cover Sprint 2 navigation, safe pricing content, and theme persistence.
 - Revision verification confirms the homepage and key conversion pages render with improved visual hierarchy and temporary `www.gstatic.com` assets without adding fake portfolio/testimonial claims.
+- Dark mode readability was revised across Sprint 2 pages by strengthening dark surfaces and text contrast, with e2e coverage for Sprint 2 page visibility in dark mode.
 
 ## QA Notes
 

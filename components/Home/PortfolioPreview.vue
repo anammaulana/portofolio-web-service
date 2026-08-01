@@ -15,7 +15,7 @@ import { homeContent } from '~/content/home'
         <article
           v-for="(item, index) in homeContent.portfolio.items"
           :key="item"
-          class="rounded-lg border border-dashed border-line bg-[linear-gradient(145deg,#faf8f4,#edf5f6)] p-5 dark:border-white/16 dark:bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(137,199,220,0.08))]"
+          class="rounded-lg border border-dashed border-line bg-[linear-gradient(145deg,#faf8f4,#edf5f6)] p-5 dark:border-white/15 dark:bg-[linear-gradient(145deg,rgba(24,32,39,0.98),rgba(30,55,64,0.98))]"
         >
           <div class="mb-8 overflow-hidden rounded-md border border-line bg-white dark:border-white/12 dark:bg-white/8">
             <img
@@ -26,7 +26,7 @@ import { homeContent } from '~/content/home'
               height="180"
             >
           </div>
-          <h3 class="text-sm font-semibold leading-6 text-ink dark:text-white">{{ item }}</h3>
+          <h3 class="text-sm font-semibold leading-6 text-ink dark:text-white/90">{{ item }}</h3>
         </article>
       </div>
     </div>

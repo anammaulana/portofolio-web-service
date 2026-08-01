@@ -89,4 +89,27 @@ test.describe('homepage smoke', () => {
     await page.reload()
     await expect(page.locator('html')).toHaveClass(/dark/)
   })
+
+  test('dark mode keeps Sprint 2 page content visible', async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'dark' })
+    await page.goto('/')
+    await page.evaluate(() => {
+      localStorage.setItem('anam-web-studio-theme', 'dark')
+      document.documentElement.classList.add('dark')
+    })
+
+    for (const item of [
+      { url: '/about', heading: /Partner website development/ },
+      { url: '/services', heading: /Layanan inti/ },
+      { url: '/pricing', heading: /Estimasi awal/ },
+      { url: '/process', heading: /Proses kerja bertahap/ },
+      { url: '/faq', heading: /Pertanyaan yang sering muncul/ },
+      { url: '/contact', heading: /Mulai konsultasi awal/ }
+    ]) {
+      await page.goto(item.url)
+      await expect(page.locator('html')).toHaveClass(/dark/)
+      await expect(page.getByRole('heading', { name: item.heading })).toBeVisible()
+      await expect(page.locator('main')).toBeVisible()
+    }
+  })
 })

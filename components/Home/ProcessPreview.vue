@@ -14,11 +14,11 @@ import { homeContent } from '~/content/home'
         <article
           v-for="item in homeContent.process"
           :key="item.step"
-          class="rounded-lg bg-ink p-6 text-white shadow-[0_22px_60px_rgba(21,21,21,0.16)] dark:bg-white/8 dark:shadow-none"
+          class="rounded-lg bg-ink p-6 text-white shadow-[0_22px_60px_rgba(21,21,21,0.16)] dark:border dark:border-white/15 dark:bg-[#182027] dark:shadow-none"
         >
           <p class="text-sm font-semibold text-[#f1a37f]">{{ item.step }}</p>
           <h3 class="mt-8 text-xl font-semibold">{{ item.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-white/76">{{ item.description }}</p>
+          <p class="mt-3 text-sm leading-6 text-white/82">{{ item.description }}</p>
         </article>
       </div>
     </div>

@@ -19,7 +19,7 @@ import { homeContent } from '~/content/home'
           <span
             v-for="point in homeContent.proofPoints"
             :key="point"
-            class="rounded-full border border-ink/10 bg-white/70 px-3 py-1.5 text-sm font-medium text-ink/74 backdrop-blur dark:border-white/12 dark:bg-white/8 dark:text-white/74"
+            class="rounded-full border border-ink/10 bg-white/70 px-3 py-1.5 text-sm font-medium text-ink/74 backdrop-blur dark:border-white/15 dark:bg-[#182027] dark:text-white/85"
           >
             {{ point }}
           </span>
@@ -44,12 +44,12 @@ import { homeContent } from '~/content/home'
             height="720"
           >
         </div>
-        <figcaption class="mt-3 text-sm leading-6 text-ink/62 dark:text-white/62">
+        <figcaption class="mt-3 text-sm leading-6 text-ink/62 dark:text-white/75">
           Visual sementara dari Google CDN untuk mood board, bukan bukti hasil klien.
         </figcaption>
-        <div class="absolute bottom-10 left-4 right-4 rounded-lg border border-white/70 bg-white/88 p-4 shadow-soft backdrop-blur dark:border-white/12 dark:bg-[#11161a]/88 sm:left-8 sm:right-auto sm:w-80">
+        <div class="absolute bottom-10 left-4 right-4 rounded-lg border border-white/70 bg-white/88 p-4 shadow-soft backdrop-blur dark:border-white/15 dark:bg-[#121a21]/92 sm:left-8 sm:right-auto sm:w-80">
           <p class="text-xs font-semibold uppercase text-copper dark:text-[#f1a37f]">Conversion brief</p>
-          <p class="mt-2 text-sm leading-6 text-ink/74 dark:text-white/74">
+          <p class="mt-2 text-sm leading-6 text-ink/74 dark:text-white/85">
             Struktur halaman, CTA, dan konten disusun untuk konsultasi yang jelas sejak kunjungan pertama.
           </p>
         </div>

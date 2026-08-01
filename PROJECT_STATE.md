@@ -96,6 +96,7 @@ Decisions:
 - 2026-08-01: Owner requested `REVISION RESULT` for Sprint 2 because the public GitHub history still included the old workspace initialization commit `fcd635b Initialize Scofield AI freelance workspace`; correction scope is to clean the project Git history and keep `origin` on `https://github.com/anammaulana/portofolio-web-service.git`.
 - 2026-08-01: Sprint 2 revision completed by force-pushing a clean project-only `main` history to `https://github.com/anammaulana/portofolio-web-service.git`; latest remote commit after correction is `79a401e`.
 - 2026-08-01: Owner requested another `REVISION RESULT` before next sprint: improve the UI to look more attractive and professional, and use temporary content/media from Google CDN where appropriate.
+- 2026-08-01: Owner requested dark mode readability QA before Sprint 2 approval because some content appeared out of sync with dark mode and text could become hard to read.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -316,4 +317,12 @@ Sprint 2 UI revision result:
 - Updated unit coverage to assert Google CDN placeholder usage.
 - Visual verification: desktop 1440px and mobile 360px screenshots were checked; no obvious text/CTA overlap was found.
 - Verification after revision: `npm run build` PASS; `npm run test` PASS with unit 4/4 and Playwright Chromium 5/5.
+- Remaining notes: Nuxt `#app-manifest` dev-server log and dependency `DEP0155` warning remain non-blocking.
+
+Sprint 2 dark mode readability revision:
+- Owner reported that some dark mode content was not visually synchronized and text could become hard to read.
+- QA finding by Scofield: several Sprint 2 pages and homepage cards still used older low-opacity dark surfaces/text patterns after the UI polish.
+- Fix applied: standardized dark surfaces to stronger dark panels, increased muted text contrast, updated hero chips/caption/overlay, services cards, portfolio placeholders, process cards, pricing cards, FAQ panel, and contact panel.
+- Added Playwright smoke coverage for Sprint 2 page content visibility in dark mode across `/about`, `/services`, `/pricing`, `/process`, `/faq`, and `/contact`.
+- Verification: `npm run build` PASS after stopping stale project Nuxt processes; `npm run test` PASS with unit 4/4 and Playwright Chromium 6/6.
 - Remaining notes: Nuxt `#app-manifest` dev-server log and dependency `DEP0155` warning remain non-blocking.
