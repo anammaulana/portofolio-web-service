@@ -6,9 +6,9 @@ Project objective: Build a professional, SEO-friendly Nuxt website for Anam Maul
 
 Approved requirement version: v1
 
-Current sprint: Sprint 1 planned, not approved
+Current sprint: Sprint 1 - Foundation and Design System
 
-Current status: WAITING_SPRINT_PLAN_APPROVAL
+Current status: IN PROGRESS - QA TEST SCENARIO
 
 Completed sprints:
 - None.
@@ -81,9 +81,12 @@ Decisions:
 - 2026-08-01: Scofield recorded proposed requirement v1 and set status to WAITING_REQUIREMENT_APPROVAL.
 - 2026-08-01: Owner approved requirement v1 via `APPROVE REQUIREMENT`.
 - 2026-08-01: Scofield prepared Sprint 1 plan for approval gate; no implementation delegated.
+- 2026-08-01: Owner approved Sprint 1 via `APPROVE SPRINT`.
+- 2026-08-01: Scofield moved Sprint 1 to QA test scenario preparation before implementation.
 
 Open issues:
-- Sprint 1 approval is pending.
+- Sprint 1 implementation has not started yet.
+- Nadella must complete `S1-QA-01` test scenario before Lincon starts implementation.
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
 
 Known risks:
@@ -137,6 +140,6 @@ Sprint 1 acceptance criteria:
 11. Production build passes.
 12. README documents Sprint 1 setup and verified behavior after QA.
 
-Last Owner approval: 2026-08-01 - requirement v1 approved.
+Last Owner approval: 2026-08-01 - Sprint 1 approved.
 
-Next required Owner action: Reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+Next required Owner action: Wait for Nadella `S1-QA-01` test scenario handoff, then Scofield will assign Lincon for Sprint 1 implementation.
