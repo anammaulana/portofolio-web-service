@@ -6,6 +6,8 @@ export const siteConfig = {
     { label: 'Layanan', href: '/services' },
     { label: 'Harga', href: '/pricing' },
     { label: 'Proses', href: '/process' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '/faq' }
   ],
   cta: {

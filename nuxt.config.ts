@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-      whatsappNumber: process.env.NUXT_PUBLIC_WHATSAPP_NUMBER || ''
+      whatsappNumber: process.env.NUXT_PUBLIC_WHATSAPP_NUMBER || '',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com'
     }
   },
   typescript: {

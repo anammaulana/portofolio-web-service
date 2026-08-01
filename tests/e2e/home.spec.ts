@@ -103,6 +103,8 @@ test.describe('homepage smoke', () => {
       { url: '/services', heading: /Layanan inti/ },
       { url: '/pricing', heading: /Estimasi awal/ },
       { url: '/process', heading: /Proses kerja bertahap/ },
+      { url: '/portfolio', heading: /Portfolio disiapkan/ },
+      { url: '/blog', heading: /Blog draft/ },
       { url: '/faq', heading: /Pertanyaan yang sering muncul/ },
       { url: '/contact', heading: /Mulai konsultasi awal/ }
     ]) {
@@ -111,5 +113,40 @@ test.describe('homepage smoke', () => {
       await expect(page.getByRole('heading', { name: item.heading })).toBeVisible()
       await expect(page.locator('main')).toBeVisible()
     }
+  })
+
+  test('renders Sprint 3 portfolio, blog, seo routes, and 404 safely', async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 900 })
+    await page.goto('/')
+
+    const navigation = page.getByRole('navigation', { name: 'Navigasi utama' })
+    await navigation.getByRole('link', { name: 'Portfolio' }).click()
+    await expect(page).toHaveURL(/\/portfolio$/)
+    await expect(page.getByRole('heading', { name: /Portfolio disiapkan/ })).toBeVisible()
+    await expect(page.getByText(/Nama klien, logo, angka performa/)).toBeVisible()
+
+    await page.getByRole('link', { name: /Lihat struktur studi kasus/ }).first().click()
+    await expect(page).toHaveURL(/\/portfolio\/company-profile-service-business$/)
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Company Profile')
+    await expect(page.getByText(/Tidak ada nama klien, logo, angka performa/)).toBeVisible()
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/portfolio\/company-profile-service-business$/)
+
+    await page.goto('/blog')
+    await expect(page.getByRole('heading', { name: /Blog draft/ })).toBeVisible()
+    await page.getByRole('link', { name: /Baca draft artikel/ }).first().click()
+    await expect(page).toHaveURL(/\/blog\/cara-menyiapkan-brief-website-bisnis$/)
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Cara Menyiapkan Brief')
+    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', /Cara Menyiapkan Brief/)
+
+    const robots = await page.request.get('/robots.txt')
+    expect(robots.ok()).toBeTruthy()
+    await expect(await robots.text()).toContain('Sitemap:')
+
+    const sitemap = await page.request.get('/sitemap.xml')
+    expect(sitemap.ok()).toBeTruthy()
+    await expect(await sitemap.text()).toContain('/portfolio/company-profile-service-business')
+
+    await page.goto('/halaman-tidak-ada')
+    await expect(page.getByRole('heading', { name: /Halaman ini belum tersedia/ })).toBeVisible()
   })
 })

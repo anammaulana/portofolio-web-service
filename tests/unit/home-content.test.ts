@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { businessContent } from '../../content/business'
+import { blogContent } from '../../content/blog'
 import { homeContent } from '../../content/home'
+import { portfolioContent } from '../../content/portfolio'
+import { buildCanonicalUrl } from '../../content/seo'
 import { siteConfig } from '../../content/site'
 
 describe('home content baseline', () => {
@@ -25,6 +28,8 @@ describe('home content baseline', () => {
       '/services',
       '/pricing',
       '/process',
+      '/portfolio',
+      '/blog',
       '/faq'
     ])
 
@@ -44,5 +49,22 @@ describe('home content baseline', () => {
     expect(serialized).not.toContain('dipercaya oleh 100')
     expect(serialized).toContain('placeholder')
     expect(serialized).toContain('terverifikasi')
+  })
+
+  it('defines Sprint 3 portfolio and blog content without fake proof', () => {
+    expect(portfolioContent.items.length).toBeGreaterThanOrEqual(3)
+    expect(blogContent.posts.length).toBeGreaterThanOrEqual(3)
+
+    const serialized = JSON.stringify({ portfolioContent, blogContent }).toLowerCase()
+    expect(serialized).toContain('placeholder')
+    expect(serialized).toContain('terverifikasi')
+    expect(serialized).not.toContain('dipercaya oleh')
+    expect(serialized).not.toContain('revenue naik')
+    expect(serialized).not.toContain('logo klien')
+  })
+
+  it('builds canonical URLs from a configurable site URL', () => {
+    expect(buildCanonicalUrl('/blog', 'https://anam.example/')).toBe('https://anam.example/blog')
+    expect(buildCanonicalUrl('portfolio/demo', 'https://anam.example')).toBe('https://anam.example/portfolio/demo')
   })
 })
