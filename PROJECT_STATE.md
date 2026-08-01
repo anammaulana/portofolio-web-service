@@ -8,7 +8,7 @@ Approved requirement version: v1
 
 Current sprint: Sprint 4 - QA and Production Readiness
 
-Current status: IN PROGRESS - S4-QA-01 COMPLETE / IMPLEMENTATION READY
+Current status: WAITING_SPRINT_RESULT_APPROVAL - SPRINT 4 REVIEW READY
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
@@ -16,7 +16,7 @@ Completed sprints:
 - Sprint 3: Portfolio, Blog, and SEO - PASS WITH NOTES, approved by Owner on 2026-08-01.
 
 Pending sprints:
-- Sprint 4: QA and Production Readiness - waiting for Owner sprint approval.
+- Sprint 4: QA and Production Readiness - waiting for Owner result approval.
 
 Proposed requirement version: v1
 
@@ -175,7 +175,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Wait for Sprint 4 implementation and verification handoff.
+Next required Owner action: Review Sprint 4 result and reply with `APPROVE RESULT`, `REVISION RESULT`, or `CANCEL PROJECT`.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -389,6 +389,45 @@ Sprint 3 QA test scenario handoff:
 - Scope guard: Sprint 3 must not add deployment, CMS/admin, analytics, CRM, payment, real testimonials, fake logos, fake outcomes, paid services, or Lighthouse final certification.
 - Blockers include failed test/build, unreadable dark mode content, fake proof claims, missing route coverage for portfolio/blog, broken metadata baseline, secrets committed, or Git remote mismatch.
 - Non-blocking notes may include Nuxt dev-server `#app-manifest` logs or dependency `DEP0155` warnings when commands still exit successfully.
+
+Sprint 4 implementation handoff:
+- Added Privacy Policy and Terms of Service content in `content/legal.ts`.
+- Added pages `/privacy` and `/terms` with safe service-site wording and no legal overclaim.
+- Added quote request form component with required-field validation, honeypot field, timing guard, formatted WhatsApp message generation, and fallback textarea when `NUXT_PUBLIC_WHATSAPP_NUMBER` is empty.
+- Added quote utilities in `utils/quote.ts` for validation, message formatting, and `wa.me` URL generation.
+- Added footer legal links via `siteConfig.legalItems`.
+- Added minimal JSON-LD structured data component for website, organization, and service facts only.
+- Added legal routes to `sitemap.xml`.
+- Updated unit and Playwright coverage for Sprint 4 legal pages, quote validation/message generation, WhatsApp fallback, structured data, and sitemap entries.
+- Updated README with verified Sprint 4 behavior, production env notes, known limitations, and rollback notes.
+
+Sprint 4 verification result:
+- Verification owner: Scofield, because dedicated Programmer/QA/Writer specialists were not available in the current environment.
+- Verdict: PASS WITH NOTES.
+- `npm run build` passed after fixing the Nuxt structured-data script typing.
+- `npm run test` passed: unit 8/8 and Playwright Chromium 8/8.
+- Route coverage verified by Playwright: `/privacy`, `/terms`, `/contact`, `/sitemap.xml`, plus existing Sprint 1-3 route smoke coverage.
+- Acceptance criteria result: 15/15 PASS by local verification.
+- Defects found: structured-data script typing failed initial production build; fixed before final verification.
+- Test-only corrections: adjusted Sprint 4 Playwright assertions for actual Terms copy, textarea value checks, and script `textContent`.
+- Non-blocking note: production build still emits dependency warning `DEP0155`.
+- Existing non-blocking note: Nuxt dev server may emit `#app-manifest` logs during Playwright webServer usage, while final tests exit successfully.
+
+Sprint 4 review:
+- Sprint goal: Prepare the website for handover and production configuration by completing legal/contact/quote readiness, factual structured data, final regression tests, and docs without deployment or paid services.
+- Completed tasks: S4-QA-01, S4-PROG-01, S4-PROG-02, S4-PROG-03, S4-PROG-04, S4-QA-02 local verification, S4-DOC-01 README/project state documentation.
+- Deliverables: Privacy page; Terms page; quote/contact form; WhatsApp message generation and fallback; basic spam guard; structured data baseline; footer legal links; sitemap legal entries; tests; README handover notes.
+- QA result: PASS WITH NOTES by local PM verification; dedicated QA specialist was unavailable.
+- Tests performed: `npm run build` passed; `npm run test` passed.
+- Defects found: one build typing defect and two brittle test assertions during implementation.
+- Defects fixed: all Sprint 4 implementation/test defects found during verification were fixed.
+- Remaining defects: non-blocking warning tracking only.
+- Documentation completed: README updated for verified Sprint 4 behavior and production handover notes.
+- Known limitations: no production deployment was performed; real WhatsApp number and final production site URL must be configured in hosting env; temporary Google CDN visuals still need approved production replacement.
+- Risks: legal copy is a practical baseline and may need formal legal review before final public launch.
+- Acceptance criteria result: 15/15 PASS.
+- Definition of Done result: PASS WITH NOTES, with specialist-agent limitation, env placeholder limitation, and deployment exclusion disclosed.
+- Result: PASS WITH NOTES.
 
 Sprint 3 implementation handoff:
 - Added typed portfolio content in `content/portfolio.ts`.

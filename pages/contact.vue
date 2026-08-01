@@ -34,5 +34,8 @@ useSeoMeta({
         </ul>
       </div>
     </div>
+    <div class="container-shell mt-12">
+      <QuoteForm />
+    </div>
   </section>
 </template>

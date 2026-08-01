@@ -11,16 +11,28 @@ import { siteConfig } from '~/content/site'
           Fondasi website marketing untuk bisnis yang membutuhkan presentasi digital profesional, jelas, dan bertahap.
         </p>
       </div>
-      <nav class="grid gap-3 text-sm" aria-label="Navigasi footer">
-        <NuxtLink
-          v-for="item in siteConfig.navItems"
-          :key="item.href"
-          :to="item.href"
-          class="text-white/72 hover:text-white"
-        >
-          {{ item.label }}
-        </NuxtLink>
-      </nav>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <nav class="grid gap-3 text-sm" aria-label="Navigasi footer">
+          <NuxtLink
+            v-for="item in siteConfig.navItems"
+            :key="item.href"
+            :to="item.href"
+            class="text-white/72 hover:text-white"
+          >
+            {{ item.label }}
+          </NuxtLink>
+        </nav>
+        <nav class="grid content-start gap-3 text-sm" aria-label="Legal">
+          <NuxtLink
+            v-for="item in siteConfig.legalItems"
+            :key="item.href"
+            :to="item.href"
+            class="text-white/72 hover:text-white"
+          >
+            {{ item.label }}
+          </NuxtLink>
+        </nav>
+      </div>
     </div>
     <div class="container-shell border-t border-white/12 py-5 text-sm text-white/60">
       (c) 2026 Anam Web Studio. Konten portofolio akan ditambahkan setelah terverifikasi.

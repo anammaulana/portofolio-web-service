@@ -10,6 +10,10 @@ export const siteConfig = {
     { label: 'Blog', href: '/blog' },
     { label: 'FAQ', href: '/faq' }
   ],
+  legalItems: [
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Service', href: '/terms' }
+  ],
   cta: {
     label: 'Konsultasi awal',
     href: '/contact'

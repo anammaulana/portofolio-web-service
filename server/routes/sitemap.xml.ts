@@ -12,6 +12,8 @@ export default defineEventHandler((event) => {
     '/process',
     '/faq',
     '/contact',
+    '/privacy',
+    '/terms',
     '/portfolio',
     '/blog'
   ]

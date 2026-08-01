@@ -149,4 +149,40 @@ test.describe('homepage smoke', () => {
     await page.goto('/halaman-tidak-ada')
     await expect(page.getByRole('heading', { name: /Halaman ini belum tersedia/ })).toBeVisible()
   })
+
+  test('renders Sprint 4 legal pages, quote flow, sitemap, and structured data safely', async ({ page }) => {
+    await page.goto('/privacy')
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Privacy Policy')
+    await expect(page.getByText(/Website Sprint 4 tidak menyimpan submission/)).toBeVisible()
+
+    await page.goto('/terms')
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Terms of Service')
+    await expect(page.getByText(/tidak menjanjikan hasil bisnis/)).toBeVisible()
+
+    await page.goto('/contact')
+    await expect(page.getByRole('heading', { name: 'Request quote' })).toBeVisible()
+    await page.getByRole('button', { name: 'Buat pesan WhatsApp' }).click()
+    await expect(page.getByText('Nama wajib diisi.')).toBeVisible()
+    await expect(page.getByText('Tipe bisnis wajib diisi.')).toBeVisible()
+
+    await page.getByLabel('Nama').fill('Anam')
+    await page.getByLabel('Tipe bisnis').fill('Jasa profesional')
+    await page.getByLabel('Kebutuhan website').fill('Butuh website company profile dengan halaman layanan.')
+    await page.getByLabel('Estimasi budget').selectOption('Rp3.500.000 - Rp7.500.000')
+    await page.getByLabel('Timeline').selectOption('3-4 minggu')
+    await page.getByLabel('Website saat ini (opsional)').fill('https://example.com')
+    await page.waitForTimeout(900)
+    await page.getByRole('button', { name: 'Buat pesan WhatsApp' }).click()
+    await expect(page.getByText('Nomor WhatsApp belum dikonfigurasi.')).toBeVisible()
+    await expect(page.getByLabel('Pesan WhatsApp yang dibuat')).toHaveValue(/Butuh website company profile/)
+
+    const structuredData = await page.locator('script[type="application/ld+json"]').first().textContent()
+    expect(structuredData).toContain('Service')
+
+    const sitemap = await page.request.get('/sitemap.xml')
+    expect(sitemap.ok()).toBeTruthy()
+    const sitemapText = await sitemap.text()
+    expect(sitemapText).toContain('/privacy')
+    expect(sitemapText).toContain('/terms')
+  })
 })

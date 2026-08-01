@@ -16,8 +16,9 @@ Nuxt 3 website foundation for Anam Web Studio's professional website development
 - Contact CTA reads `NUXT_PUBLIC_WHATSAPP_NUMBER` when configured and falls back to a safe local contact page placeholder.
 - Sprint 2 revision UI polish: premium hero layout, stronger content hierarchy, refined cards/sections, and temporary Google CDN-hosted visual placeholders.
 - Sprint 3 portfolio and blog foundation with placeholder-safe content, SEO metadata helper, sitemap, robots, and 404 page.
+- Sprint 4 production-readiness baseline: Privacy Policy, Terms of Service, quote request form, WhatsApp message generation, basic spam guard, footer legal links, and factual structured data.
 
-Out of scope: portfolio listing/detail, case studies, blog, sitemap, robots.txt, full structured data, production deployment, CMS/admin dashboard, payment gateway, backend CRM, paid anti-spam service, fake testimonials, fake client results, and unverified portfolio/client outcome claims.
+Out of scope: production deployment, DNS/hosting setup, CMS/admin dashboard, payment gateway, backend CRM, email sending, paid anti-spam service, analytics setup, final Lighthouse certification, fake testimonials, fake client results, and unverified portfolio/client outcome claims.
 
 ## Setup
 
@@ -29,10 +30,11 @@ npx playwright install chromium
 Create a local `.env` only when needed. Do not commit it. Use `.env.example` as the placeholder reference.
 
 ```env
+NUXT_PUBLIC_SITE_URL=https://example.com
 NUXT_PUBLIC_WHATSAPP_NUMBER=YOUR_WHATSAPP_NUMBER
 ```
 
-`YOUR_WHATSAPP_NUMBER` is a placeholder. Do not add real phone numbers, tokens, passwords, private keys, or production credentials to committed files.
+`NUXT_PUBLIC_SITE_URL` controls canonical URLs and sitemap output. `YOUR_WHATSAPP_NUMBER` is a placeholder for local setup. Do not add real phone numbers, tokens, passwords, private keys, or production credentials to committed files.
 
 ## Development
 
@@ -59,6 +61,8 @@ Implemented pages:
 - `/blog/seo-dasar-untuk-website-layanan`
 - `/faq`
 - `/contact`
+- `/privacy`
+- `/terms`
 - `/robots.txt`
 - `/sitemap.xml`
 
@@ -103,12 +107,24 @@ Verified Sprint 3 behavior:
 - `robots.txt`, `sitemap.xml`, and a custom 404 page are available.
 - Unit and Playwright smoke tests cover Sprint 3 content safety, route navigation, metadata visibility, sitemap/robots, and 404 behavior.
 
+Verified Sprint 4 behavior:
+
+- Privacy Policy and Terms of Service pages render and are linked from the footer.
+- Quote request form validates required fields before preparing a WhatsApp message.
+- Form submission uses a honeypot/timing spam guard and does not persist data to a backend or database.
+- When `NUXT_PUBLIC_WHATSAPP_NUMBER` is empty, the form shows a safe fallback message textarea instead of failing.
+- When `NUXT_PUBLIC_WHATSAPP_NUMBER` is configured, the generated message is encoded into a `wa.me` URL.
+- Minimal JSON-LD structured data is present for website, organization, and service facts only.
+- Legal routes are included in `sitemap.xml`.
+- Unit and Playwright smoke tests cover legal pages, quote validation/message generation, fallback behavior, structured data, and sitemap entries.
+
 ## QA Notes
 
 - During development, Nuxt may emit repeated `#app-manifest` pre-transform error logs after `npm run dev` and a page request. This is a non-blocking Sprint 1 note because `/` returns HTTP 200 and the verified tests/build pass.
 - Production build may emit a `DEP0155` dependency warning from the dependency tree. This is a non-blocking Sprint 1 note.
 - Temporary visual placeholders are loaded from Google-hosted CDN URLs and should be replaced with brand/project-owned assets before production launch.
 - `NUXT_PUBLIC_SITE_URL` defaults to `https://example.com`; set the production site URL through environment variables before launch so canonical URLs and sitemap output are correct.
+- `NUXT_PUBLIC_WHATSAPP_NUMBER` must be configured in the production host to enable direct WhatsApp opening from the quote form.
 
 ## Structure
 
@@ -141,4 +157,13 @@ Do not push this project to the old `setup-ai-agent` remote.
 - `.env` is ignored by git.
 - `.env.example` contains placeholders only.
 - No real phone number, tokens, API keys, passwords, private keys, or credentials should be committed.
-- WhatsApp message generation and real contact wiring are not implemented in Sprint 1.
+- Quote form data is not stored by the current website.
+- WhatsApp message generation is client-side and depends on `NUXT_PUBLIC_WHATSAPP_NUMBER`.
+
+## Production Handover Notes
+
+- Configure `NUXT_PUBLIC_SITE_URL` with the final domain before production launch.
+- Configure `NUXT_PUBLIC_WHATSAPP_NUMBER` with the approved public WhatsApp number in the hosting environment.
+- Replace temporary Google CDN placeholder visuals with approved brand/project-owned assets before final production release.
+- Run `npm run test` and `npm run build` before every handover or deployment.
+- Rollback is handled through Git by reverting to the last approved commit on `main`.
