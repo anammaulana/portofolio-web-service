@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { homeContent } from '~/content/home'
-import { siteConfig } from '~/content/site'
 </script>
 
 <template>
-  <section id="kontak" class="bg-moss py-16 text-white sm:py-20" aria-labelledby="cta-heading">
+  <section id="kontak" class="bg-moss py-16 text-white dark:bg-[#244131] sm:py-20" aria-labelledby="cta-heading">
     <div class="container-shell grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
       <div>
         <h2 id="cta-heading" class="max-w-3xl text-3xl font-semibold leading-tight sm:text-4xl">
@@ -14,9 +13,7 @@ import { siteConfig } from '~/content/site'
           {{ homeContent.finalCta.description }}
         </p>
       </div>
-      <UiCtaLink :href="siteConfig.cta.href">
-        {{ siteConfig.cta.label }}
-      </UiCtaLink>
+      <ContactCta />
     </div>
   </section>
 </template>

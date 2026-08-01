@@ -3,7 +3,7 @@ import { siteConfig } from '~/content/site'
 </script>
 
 <template>
-  <footer class="border-t border-line bg-ink text-white">
+  <footer class="border-t border-line bg-ink text-white dark:border-white/12 dark:bg-[#0d0f12]">
     <div class="container-shell grid gap-8 py-10 md:grid-cols-[1fr_auto] md:items-start">
       <div>
         <p class="text-lg font-semibold">{{ siteConfig.name }}</p>
@@ -12,14 +12,14 @@ import { siteConfig } from '~/content/site'
         </p>
       </div>
       <nav class="grid gap-3 text-sm" aria-label="Navigasi footer">
-        <a
+        <NuxtLink
           v-for="item in siteConfig.navItems"
           :key="item.href"
-          :href="item.href"
+          :to="item.href"
           class="text-white/72 hover:text-white"
         >
           {{ item.label }}
-        </a>
+        </NuxtLink>
       </nav>
     </div>
     <div class="container-shell border-t border-white/12 py-5 text-sm text-white/60">

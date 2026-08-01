@@ -8,12 +8,12 @@
   }
 
   body {
-    @apply bg-paper text-ink antialiased;
+    @apply bg-paper text-ink antialiased dark:bg-[#14161a] dark:text-white;
   }
 
   a,
   button {
-    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ocean;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ocean dark:focus-visible:outline-[#89c7dc];
   }
 }
 

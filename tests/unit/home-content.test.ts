@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { businessContent } from '../../content/business'
 import { homeContent } from '../../content/home'
 import { siteConfig } from '../../content/site'
 
@@ -13,11 +14,28 @@ describe('home content baseline', () => {
   })
 
   it('keeps contact configuration placeholder-friendly', () => {
-    expect(siteConfig.cta.href).toBe('#kontak')
+    expect(siteConfig.cta.href).toBe('/contact')
+  })
+
+  it('defines Sprint 2 business pages and safe pricing language', () => {
+    expect(siteConfig.navItems.map((item) => item.href)).toEqual([
+      '/about',
+      '/services',
+      '/pricing',
+      '/process',
+      '/faq'
+    ])
+
+    expect(businessContent.pricing.packages.length).toBeGreaterThanOrEqual(3)
+    for (const item of businessContent.pricing.packages) {
+      expect(item.price).toContain('Mulai dari')
+      expect(item.price.toLowerCase()).not.toContain('harga final')
+      expect(item.price.toLowerCase()).not.toContain('garansi')
+    }
   })
 
   it('does not claim fake testimonials or verified client results', () => {
-    const serialized = JSON.stringify(homeContent).toLowerCase()
+    const serialized = JSON.stringify({ homeContent, businessContent }).toLowerCase()
 
     expect(serialized).not.toContain('testimoni klien')
     expect(serialized).not.toContain('meningkatkan revenue')

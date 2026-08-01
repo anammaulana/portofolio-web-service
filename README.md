@@ -2,7 +2,7 @@
 
 Nuxt 3 website foundation for Anam Web Studio's professional website development service.
 
-## Sprint 1 Scope
+## Implemented Scope
 
 - Nuxt + Vue + TypeScript + Tailwind CSS foundation.
 - Reusable layout, navigation, footer, UI components, homepage sections, and content data.
@@ -10,8 +10,12 @@ Nuxt 3 website foundation for Anam Web Studio's professional website development
 - Homepage SEO title and meta description baseline.
 - Placeholder-only WhatsApp environment configuration.
 - Unit and e2e smoke tests for homepage render and navigation behavior.
+- Sprint 2 business pages: About, Services, Pricing, Process, FAQ, and Contact.
+- Responsive navigation links for Sprint 2 pages from desktop and 360px mobile menu.
+- Persistent light/dark mode toggle with keyboard-accessible button and visible focus state.
+- Contact CTA reads `NUXT_PUBLIC_WHATSAPP_NUMBER` when configured and falls back to a safe local contact page placeholder.
 
-Out of scope for Sprint 1: About page, Services detail page, Pricing page, Contact page, quote form, WhatsApp message generation, real portfolio details, testimonials, blog flow, sitemap, robots, structured data, deployment, CMS/admin, and Lighthouse certification.
+Out of scope: portfolio listing/detail, case studies, blog, sitemap, robots.txt, full structured data, production deployment, CMS/admin dashboard, payment gateway, backend CRM, paid anti-spam service, fake testimonials, fake client results, and unverified portfolio/client outcome claims.
 
 ## Setup
 
@@ -36,6 +40,16 @@ npm run dev
 
 Nuxt serves the app locally. The homepage is available at `/`.
 
+Implemented pages:
+
+- `/`
+- `/about`
+- `/services`
+- `/pricing`
+- `/process`
+- `/faq`
+- `/contact`
+
 ## Verification
 
 ```bash
@@ -57,6 +71,15 @@ Verified Sprint 1 behavior:
 - `.env.example` contains placeholder-only WhatsApp configuration.
 - Unit tests, Playwright e2e smoke tests, and production build are part of the verified Sprint 1 baseline.
 
+Verified Sprint 2 behavior:
+
+- About, Services, Pricing, Process, FAQ, and Contact pages render and are discoverable from navigation.
+- Pricing uses `Mulai dari` wording and does not present final fixed prices as guaranteed.
+- Contact CTA remains environment-based and placeholder-safe when `NUXT_PUBLIC_WHATSAPP_NUMBER` is empty.
+- Light/dark mode toggle is visible, keyboard-accessible, and persists after reload through `localStorage`.
+- Navigation works on desktop and mobile at 360px minimum.
+- Unit and Playwright smoke tests cover Sprint 2 navigation, safe pricing content, and theme persistence.
+
 ## QA Notes
 
 - During development, Nuxt may emit repeated `#app-manifest` pre-transform error logs after `npm run dev` and a page request. This is a non-blocking Sprint 1 note because `/` returns HTTP 200 and the verified tests/build pass.
@@ -75,6 +98,16 @@ pages/               Nuxt pages
 tests/unit/          Vitest tests
 tests/e2e/           Playwright tests
 ```
+
+## GitHub Repository
+
+Approved Sprint 2 repository:
+
+```text
+https://github.com/anammaulana/portofolio-web-service.git
+```
+
+Do not push this project to the old `setup-ai-agent` remote.
 
 ## Security Notes
 

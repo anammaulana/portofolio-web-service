@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { homeContent } from '~/content/home'
+import { businessContent } from '~/content/business'
+
+const content = businessContent.faq
+
+useSeoMeta({
+  title: content.seoTitle,
+  description: content.title
+})
 </script>
 
 <template>
-  <section id="faq" class="bg-white py-16 dark:bg-[#181b20] sm:py-20" aria-labelledby="faq-heading">
+  <section class="bg-paper py-16 dark:bg-[#14161a] sm:py-20">
     <div class="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-      <UiSectionHeader
-        id="faq-heading"
-        eyebrow="FAQ"
-        title="Pertanyaan awal sebelum masuk sprint berikutnya."
-      />
-      <div class="divide-y divide-line rounded-lg border border-line dark:divide-white/12 dark:border-white/12">
+      <UiSectionHeader eyebrow="FAQ" :title="content.title" />
+      <div class="divide-y divide-line rounded-lg border border-line bg-white dark:divide-white/12 dark:border-white/12 dark:bg-white/7">
         <details
-          v-for="faq in homeContent.faqs"
+          v-for="faq in content.items"
           :key="faq.question"
           class="group p-5"
         >
