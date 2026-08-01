@@ -8,7 +8,7 @@ Approved requirement version: v1
 
 Current sprint: Sprint 2 - Business Conversion Pages, Dark Mode, and GitHub Setup
 
-Current status: IN PROGRESS - QA TEST SCENARIO
+Current status: IN PROGRESS - IMPLEMENTATION
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
@@ -90,6 +90,7 @@ Decisions:
 - 2026-08-01: Scofield prepared Sprint 2 plan and set status to WAITING_SPRINT_PLAN_APPROVAL. No Sprint 2 implementation delegated yet.
 - 2026-08-01: Owner approved Sprint 2 via `APPROVE SPRINT`.
 - 2026-08-01: Scofield moved Sprint 2 to QA test scenario preparation before implementation.
+- 2026-08-01: Nadella completed `S2-QA-01` test scenario handoff. Scofield moved Sprint 2 to Lincon implementation.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -158,7 +159,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Wait for Nadella Sprint 2 test scenario handoff, then Scofield will assign Lincon for approved Sprint 2 implementation.
+Next required Owner action: Wait for Lincon Sprint 2 implementation handoff, then Scofield will assign Nadella for `S2-QA-02`.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -235,4 +236,12 @@ Sprint 2 acceptance criteria:
 11. Git remote points to `https://github.com/anammaulana/portofolio-web-service.git` before push; no push is made to the old `setup-ai-agent` remote.
 12. README documents verified Sprint 2 behavior, dark mode, setup/test commands, and GitHub repository notes.
 
-Next required Owner action: Wait for Nadella Sprint 2 test scenario handoff, then Scofield will assign Lincon for approved Sprint 2 implementation.
+Sprint 2 QA test scenario handoff:
+- S2-QA-01 completed before implementation, as required by Owner.
+- QA will verify business/conversion pages, pricing copy safety, WhatsApp/contact config safety, dark mode switch behavior, light/dark visual quality, keyboard/focus accessibility, responsive behavior from 360px, no fake proof/content claims, automated coverage, README accuracy, Git remote safety, and push hygiene.
+- Required post-implementation commands: `npm run test`, `npm run build`, `git remote -v`, and `git status --short`; optional `npm run lint` and `npm run typecheck` if available in `package.json`.
+- Scope guard: Sprint 2 must not claim portfolio listing/detail, blog, sitemap, robots.txt, full structured data, deployment, CMS/admin dashboard, payment gateway, backend CRM, paid anti-spam service, fake testimonials, fake client results, or unverified portfolio claims as complete.
+- Blockers include failed test/build, dark mode not keyboard-usable, theme persistence breaking SSR/SSG, remote still pointing to the old repository before push, secrets/private values committed, fixed final price claims, or fake proof.
+- Non-blocking notes may include dependency warnings that do not fail build/test or minor copy/visual polish issues that do not break business rules, contrast, or usability.
+
+Next required Owner action: Wait for Lincon Sprint 2 implementation handoff, then Scofield will assign Nadella for `S2-QA-02`.
