@@ -6,16 +6,17 @@ Project objective: Build a professional, SEO-friendly Nuxt website for Anam Maul
 
 Approved requirement version: v1
 
-Current sprint: Sprint 3 - Portfolio, Blog, and SEO
+Current sprint: Sprint 4 - QA and Production Readiness
 
-Current status: WAITING_SPRINT_RESULT_APPROVAL
+Current status: WAITING_SPRINT_PLAN_APPROVAL
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
 - Sprint 2: Business Conversion Pages, Dark Mode, and GitHub Setup - PASS WITH NOTES after revisions, approved by Owner on 2026-08-01.
+- Sprint 3: Portfolio, Blog, and SEO - PASS WITH NOTES, approved by Owner on 2026-08-01.
 
 Pending sprints:
-- Sprint 4 candidate after Sprint 3 approval/result: QA and Production Readiness.
+- Sprint 4: QA and Production Readiness - waiting for Owner sprint approval.
 
 Proposed requirement version: v1
 
@@ -102,6 +103,8 @@ Decisions:
 - 2026-08-01: Owner approved Sprint 3 via `APPROVE SPRINT`.
 - 2026-08-01: Scofield completed S3-QA-01 test scenario preparation directly because dedicated QA agent was not available in the current environment.
 - 2026-08-01: Scofield completed Sprint 3 implementation, verification, and documentation directly because dedicated specialist agents were not available in the current environment. Verdict: PASS WITH NOTES.
+- 2026-08-01: Owner approved Sprint 3 result via `APPROVE RESULT`.
+- 2026-08-01: Scofield prepared Sprint 4 plan and set status to WAITING_SPRINT_PLAN_APPROVAL. No Sprint 4 implementation delegated yet.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -162,7 +165,7 @@ Sprint 1 acceptance criteria:
 11. Production build passes.
 12. README documents Sprint 1 setup and verified behavior after QA.
 
-Last Owner approval: 2026-08-01 - Sprint 3 approved.
+Last Owner approval: 2026-08-01 - Sprint 3 result approved.
 
 Sprint 1 QA test scenario handoff:
 - S1-QA-01 completed before implementation, as required by Owner.
@@ -170,7 +173,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Review Sprint 3 result and reply with `APPROVE RESULT`, `REVISION RESULT`, or `CANCEL PROJECT`.
+Next required Owner action: Review Sprint 4 plan and reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -420,3 +423,43 @@ Sprint 3 review:
 - Acceptance criteria result: 15/15 PASS.
 - Definition of Done result: PASS WITH NOTES, with QA delegation limitation and production URL limitation disclosed.
 - Result: PASS WITH NOTES.
+
+Sprint 4 plan:
+- Sprint title: QA and Production Readiness.
+- Sprint goal: Prepare the website for handover and production configuration by completing the remaining lightweight legal/contact/quote readiness, strengthening SEO/structured-data basics, and performing final verification without deploying or adding paid services.
+- Included scope: Privacy Policy page; Terms of Service page; quote request/contact form UI with required-field validation and formatted WhatsApp message generation using environment-based WhatsApp number; safe fallback when WhatsApp number is empty; basic spam-protection honeypot or timing guard without paid services; organization/website/service structured data baseline; production environment documentation for `NUXT_PUBLIC_SITE_URL` and `NUXT_PUBLIC_WHATSAPP_NUMBER`; final smoke/regression tests; final README handover/deployment notes; final scope/limitations summary; GitHub push after verification.
+- Excluded scope: Actual production deployment, domain/DNS setup, hosting account setup, paid anti-spam service, backend database/CRM, email sending, payment gateway, admin dashboard, real customer data storage, real client testimonials/logos/results, full Lighthouse certification, analytics setup, and replacing placeholder Google CDN assets with final brand assets unless Owner provides approved assets.
+- Deliverables: Privacy and Terms pages; quote/contact form behavior; WhatsApp message generation; structured data helper/component; updated tests; final README handover notes; final project state; final Sprint Review.
+- Dependencies: Sprint 4 approval; public WhatsApp number may remain placeholder if Owner does not provide one; production domain may remain `NUXT_PUBLIC_SITE_URL` env placeholder if deployment target is not approved.
+- Risks: Quote form can grow into backend/CRM scope if not controlled; structured data must not encode fake business facts; Lighthouse targets may need image replacement and production hosting to validate fully.
+- Definition of Done: Sprint 4 follows approved scope; QA scenarios are prepared before implementation; tests/build pass; no secrets are committed; legal/contact pages and WhatsApp behavior are placeholder-safe; structured data is factual and minimal; README documents setup, production env, testing, known limitations, and rollback; Scofield returns final Sprint Review for Owner result approval.
+
+Sprint 4 backlog:
+- S4-QA-01: Owner Nadella; complexity S; dependency approved Sprint 4. Create test scenarios for privacy/terms, quote form validation, WhatsApp message generation, spam guard, structured data, production env docs, responsive/dark mode, build/test, and no scope creep.
+- S4-PROG-01: Owner Lincon; complexity M; dependency S4-QA-01. Build Privacy Policy and Terms pages with safe, generic service-site wording and no legal overclaim.
+- S4-PROG-02: Owner Lincon; complexity M; dependency S4-PROG-01. Build quote/contact form UI with required-field validation, honeypot/timing guard, formatted WhatsApp message generation, and safe fallback.
+- S4-PROG-03: Owner Lincon; complexity M; dependency S4-PROG-02. Add minimal structured data baseline for website/organization/service using factual placeholder-safe values.
+- S4-PROG-04: Owner Lincon; complexity S; dependency S4-PROG-03. Add/update unit and e2e coverage for legal pages, quote form validation, WhatsApp fallback/message, structured data, mobile, dark mode, and final smoke routes.
+- S4-QA-02: Owner Nadella; complexity M; dependency Lincon handoff. Verify acceptance criteria, final regression, responsive 360px, dark mode readability, env safety, no fake proof, build/test, and Git status.
+- S4-DOC-01: Owner Sara; complexity S; dependency QA PASS or approved PASS WITH NOTES. Update README/handover notes with production env setup, content editing, testing, deployment preparation, known limitations, and rollback considerations.
+
+Sprint 4 acceptance criteria:
+1. Privacy Policy page exists, is navigable, and explains placeholder-safe form/contact data handling.
+2. Terms of Service page exists, is navigable, and avoids legal overclaim or unsupported guarantees.
+3. Quote/contact form validates required fields before generating an outbound WhatsApp message.
+4. WhatsApp message generation uses `NUXT_PUBLIC_WHATSAPP_NUMBER` and has a safe fallback when the number is empty.
+5. Basic spam-protection guard exists without paid service or backend storage.
+6. No submitted form data is persisted to repository, local database, or backend service.
+7. Structured data baseline is present and uses only factual, placeholder-safe business information.
+8. Navigation/footer links include legal/contact/portfolio/blog pages without breaking mobile 360px layout.
+9. Light and dark modes remain readable on all production-readiness pages and form states.
+10. `NUXT_PUBLIC_SITE_URL` and `NUXT_PUBLIC_WHATSAPP_NUMBER` production configuration are documented.
+11. Unit/e2e tests cover legal routes, form validation/message generation, structured data presence, dark mode visibility, and final route smoke behavior.
+12. `npm run test` and `npm run build` pass.
+13. README includes final setup, test, production readiness, known limitations, and rollback notes.
+14. No secrets, `.env`, generated build output, fake testimonials, fake outcomes, fake logos, or real private customer data are committed.
+15. GitHub `main` is clean and pushed to `https://github.com/anammaulana/portofolio-web-service.git` after verification.
+
+Sprint 4 approval gate:
+- STATUS: WAITING_SPRINT_PLAN_APPROVAL.
+- Required Owner response: `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
