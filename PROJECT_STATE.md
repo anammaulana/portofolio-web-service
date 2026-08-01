@@ -8,7 +8,7 @@ Approved requirement version: v1
 
 Current sprint: Sprint 1 - Foundation and Design System
 
-Current status: IN PROGRESS - QA TEST SCENARIO
+Current status: IN PROGRESS - IMPLEMENTATION
 
 Completed sprints:
 - None.
@@ -83,10 +83,10 @@ Decisions:
 - 2026-08-01: Scofield prepared Sprint 1 plan for approval gate; no implementation delegated.
 - 2026-08-01: Owner approved Sprint 1 via `APPROVE SPRINT`.
 - 2026-08-01: Scofield moved Sprint 1 to QA test scenario preparation before implementation.
+- 2026-08-01: Nadella completed `S1-QA-01` test scenario handoff. Scofield moved Sprint 1 to Lincon implementation.
 
 Open issues:
-- Sprint 1 implementation has not started yet.
-- Nadella must complete `S1-QA-01` test scenario before Lincon starts implementation.
+- Sprint 1 implementation is assigned to Lincon.
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
 
 Known risks:
@@ -142,4 +142,10 @@ Sprint 1 acceptance criteria:
 
 Last Owner approval: 2026-08-01 - Sprint 1 approved.
 
-Next required Owner action: Wait for Nadella `S1-QA-01` test scenario handoff, then Scofield will assign Lincon for Sprint 1 implementation.
+Sprint 1 QA test scenario handoff:
+- S1-QA-01 completed before implementation, as required by Owner.
+- QA will verify Nuxt/TypeScript/Tailwind foundation, reusable structure, homepage sections, responsive navigation/footer from 360px, semantic HTML with one H1, SEO metadata baseline, `.env.example` safety, no fake social proof, baseline tests, production build, and README accuracy.
+- Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
+- Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
+
+Next required Owner action: Wait for Lincon Sprint 1 implementation handoff, then Scofield will assign Nadella for `S1-QA-02`.
