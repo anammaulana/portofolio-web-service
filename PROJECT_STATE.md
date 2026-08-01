@@ -8,13 +8,12 @@ Approved requirement version: v1
 
 Current sprint: Sprint 2 - Business Conversion Pages, Dark Mode, and GitHub Setup
 
-Current status: WAITING_SPRINT_PLAN_APPROVAL
+Current status: IN PROGRESS - QA TEST SCENARIO
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
 
 Pending sprints:
-- Sprint 2: Business Conversion Pages, Dark Mode, and GitHub Setup.
 - Sprint 3 candidate after Sprint 2 approval/result: Portfolio, Blog, and SEO.
 - Sprint 4 candidate after Sprint 3 approval/result: QA and Production Readiness.
 
@@ -89,6 +88,8 @@ Decisions:
 - 2026-08-01: Owner approved Sprint 1 result via `APPROVE RESULT`.
 - 2026-08-01: Owner requested next sprint notes: push/use GitHub repository `https://github.com/anammaulana/portofolio-web-service.git` and add an elegant switchable dark mode.
 - 2026-08-01: Scofield prepared Sprint 2 plan and set status to WAITING_SPRINT_PLAN_APPROVAL. No Sprint 2 implementation delegated yet.
+- 2026-08-01: Owner approved Sprint 2 via `APPROVE SPRINT`.
+- 2026-08-01: Scofield moved Sprint 2 to QA test scenario preparation before implementation.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -149,7 +150,7 @@ Sprint 1 acceptance criteria:
 11. Production build passes.
 12. README documents Sprint 1 setup and verified behavior after QA.
 
-Last Owner approval: 2026-08-01 - Sprint 1 result approved.
+Last Owner approval: 2026-08-01 - Sprint 2 approved.
 
 Sprint 1 QA test scenario handoff:
 - S1-QA-01 completed before implementation, as required by Owner.
@@ -157,7 +158,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Review Sprint 2 plan and reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+Next required Owner action: Wait for Nadella Sprint 2 test scenario handoff, then Scofield will assign Lincon for approved Sprint 2 implementation.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -234,4 +235,4 @@ Sprint 2 acceptance criteria:
 11. Git remote points to `https://github.com/anammaulana/portofolio-web-service.git` before push; no push is made to the old `setup-ai-agent` remote.
 12. README documents verified Sprint 2 behavior, dark mode, setup/test commands, and GitHub repository notes.
 
-Next required Owner action: Review Sprint 2 plan and reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+Next required Owner action: Wait for Nadella Sprint 2 test scenario handoff, then Scofield will assign Lincon for approved Sprint 2 implementation.
