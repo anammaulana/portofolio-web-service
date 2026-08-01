@@ -8,7 +8,7 @@ Approved requirement version: v1
 
 Current sprint: Sprint 3 - Portfolio, Blog, and SEO
 
-Current status: WAITING_SPRINT_PLAN_APPROVAL
+Current status: IN PROGRESS - S3-QA-01 COMPLETE / IMPLEMENTATION READY
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
@@ -99,6 +99,8 @@ Decisions:
 - 2026-08-01: Owner requested dark mode readability QA before Sprint 2 approval because some content appeared out of sync with dark mode and text could become hard to read.
 - 2026-08-01: Owner approved Sprint 2 result via `APPROVE RESULT` after Git history cleanup, UI polish, Google CDN placeholder content, and dark mode readability revisions.
 - 2026-08-01: Scofield prepared Sprint 3 plan and set status to WAITING_SPRINT_PLAN_APPROVAL. No Sprint 3 implementation delegated yet.
+- 2026-08-01: Owner approved Sprint 3 via `APPROVE SPRINT`.
+- 2026-08-01: Scofield completed S3-QA-01 test scenario preparation directly because dedicated QA agent was not available in the current environment.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -159,7 +161,7 @@ Sprint 1 acceptance criteria:
 11. Production build passes.
 12. README documents Sprint 1 setup and verified behavior after QA.
 
-Last Owner approval: 2026-08-01 - Sprint 2 result approved.
+Last Owner approval: 2026-08-01 - Sprint 3 approved.
 
 Sprint 1 QA test scenario handoff:
 - S1-QA-01 completed before implementation, as required by Owner.
@@ -167,7 +169,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Review Sprint 3 plan and reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+Next required Owner action: Wait for Sprint 3 implementation and verification handoff.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -368,3 +370,16 @@ Sprint 3 acceptance criteria:
 Sprint 3 approval gate:
 - STATUS: WAITING_SPRINT_PLAN_APPROVAL.
 - Required Owner response: `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
+
+Sprint 3 QA test scenario handoff:
+- S3-QA-01 completed before implementation, as required by Owner workflow.
+- QA will verify portfolio listing and case-study routes/content do not claim fake client results, testimonials, logos, or metrics.
+- QA will verify blog listing/detail foundation uses maintainable content and clearly placeholder/draft posts.
+- QA will verify SEO title/description, canonical/OG/Twitter metadata baseline, sitemap/robots baseline or documented blocker, and 404 page.
+- QA will verify navigation/internal links for portfolio and blog on desktop and 360px mobile.
+- QA will verify dark mode readability on new portfolio/blog/case-study/404 pages.
+- QA will verify no secrets, real private contact values, `.env`, generated build output, or unrelated workspace files are committed.
+- Required post-implementation commands: `npm run test`, `npm run build`, `git status --short`, and route smoke checks for `/portfolio`, `/portfolio/...`, `/blog`, `/blog/...`, `/robots.txt`, `/sitemap.xml`, and a missing route.
+- Scope guard: Sprint 3 must not add deployment, CMS/admin, analytics, CRM, payment, real testimonials, fake logos, fake outcomes, paid services, or Lighthouse final certification.
+- Blockers include failed test/build, unreadable dark mode content, fake proof claims, missing route coverage for portfolio/blog, broken metadata baseline, secrets committed, or Git remote mismatch.
+- Non-blocking notes may include Nuxt dev-server `#app-manifest` logs or dependency `DEP0155` warnings when commands still exit successfully.
