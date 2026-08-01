@@ -6,15 +6,15 @@ Project objective: Build a professional, SEO-friendly Nuxt website for Anam Maul
 
 Approved requirement version: v1
 
-Current sprint: Sprint 2 - Business Conversion Pages, Dark Mode, and GitHub Setup
+Current sprint: Sprint 3 - Portfolio, Blog, and SEO
 
-Current status: WAITING_SPRINT_RESULT_APPROVAL
+Current status: WAITING_SPRINT_PLAN_APPROVAL
 
 Completed sprints:
 - Sprint 1: Foundation and Design System - PASS WITH NOTES, approved by Owner on 2026-08-01.
+- Sprint 2: Business Conversion Pages, Dark Mode, and GitHub Setup - PASS WITH NOTES after revisions, approved by Owner on 2026-08-01.
 
 Pending sprints:
-- Sprint 3 candidate after Sprint 2 approval/result: Portfolio, Blog, and SEO.
 - Sprint 4 candidate after Sprint 3 approval/result: QA and Production Readiness.
 
 Proposed requirement version: v1
@@ -97,6 +97,8 @@ Decisions:
 - 2026-08-01: Sprint 2 revision completed by force-pushing a clean project-only `main` history to `https://github.com/anammaulana/portofolio-web-service.git`; latest remote commit after correction is `79a401e`.
 - 2026-08-01: Owner requested another `REVISION RESULT` before next sprint: improve the UI to look more attractive and professional, and use temporary content/media from Google CDN where appropriate.
 - 2026-08-01: Owner requested dark mode readability QA before Sprint 2 approval because some content appeared out of sync with dark mode and text could become hard to read.
+- 2026-08-01: Owner approved Sprint 2 result via `APPROVE RESULT` after Git history cleanup, UI polish, Google CDN placeholder content, and dark mode readability revisions.
+- 2026-08-01: Scofield prepared Sprint 3 plan and set status to WAITING_SPRINT_PLAN_APPROVAL. No Sprint 3 implementation delegated yet.
 
 Open issues:
 - Exact WhatsApp number/contact values are not recorded and should be provided through environment variables during implementation.
@@ -157,7 +159,7 @@ Sprint 1 acceptance criteria:
 11. Production build passes.
 12. README documents Sprint 1 setup and verified behavior after QA.
 
-Last Owner approval: 2026-08-01 - Sprint 2 approved.
+Last Owner approval: 2026-08-01 - Sprint 2 result approved.
 
 Sprint 1 QA test scenario handoff:
 - S1-QA-01 completed before implementation, as required by Owner.
@@ -165,7 +167,7 @@ Sprint 1 QA test scenario handoff:
 - Suggested checks include install, dev server smoke, production build, unit/e2e smoke tests, lint/typecheck if available, responsive manual checks, accessibility smoke, and scope creep review.
 - Scope guard: Sprint 1 must not claim About, Services detail, Pricing, Contact/quote form, WhatsApp generation, real portfolio/blog, sitemap, robots, full structured data, deployment, or full Lighthouse certification as complete.
 
-Next required Owner action: Review Sprint 2 result and reply with `APPROVE RESULT`, `REVISION RESULT`, or `CANCEL PROJECT`.
+Next required Owner action: Review Sprint 3 plan and reply with `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
 
 Sprint 1 implementation handoff:
 - Lincon completed Nuxt 3 + Vue + TypeScript + Tailwind foundation.
@@ -326,3 +328,43 @@ Sprint 2 dark mode readability revision:
 - Added Playwright smoke coverage for Sprint 2 page content visibility in dark mode across `/about`, `/services`, `/pricing`, `/process`, `/faq`, and `/contact`.
 - Verification: `npm run build` PASS after stopping stale project Nuxt processes; `npm run test` PASS with unit 4/4 and Playwright Chromium 6/6.
 - Remaining notes: Nuxt `#app-manifest` dev-server log and dependency `DEP0155` warning remain non-blocking.
+
+Sprint 3 plan:
+- Sprint title: Portfolio, Blog, and SEO.
+- Sprint goal: Add safe portfolio/case-study structure, blog content foundation, and practical SEO baseline without introducing fake client proof, production deployment, or heavy CMS/admin scope.
+- Included scope: Portfolio listing page; case-study detail route or placeholder-ready detail structure; verified-content guard copy; blog listing page; basic blog detail route using Markdown/content files or typed content data if Nuxt Content is not installed; sample placeholder blog posts clearly marked as internal draft/placeholder; per-page SEO metadata; canonical URL helper/config; Open Graph/Twitter metadata baseline; sitemap and robots baseline if achievable without paid services; 404 page; internal links from homepage/nav/footer where appropriate; e2e smoke tests for portfolio/blog/SEO-visible pages; README update for verified Sprint 3 behavior.
+- Excluded scope: Real client names, real testimonials, unverified performance metrics, fake case-study outcomes, paid image/content services, CMS/admin dashboard, comments, search, tags beyond minimal filtering if needed, production deployment, Lighthouse final certification, analytics setup, CRM integration, payment gateway, and Sprint 4 production-readiness work.
+- Deliverables: Portfolio route(s); safe case-study/portfolio content structure; blog route(s); placeholder/draft blog content; SEO metadata utilities/config; sitemap/robots or documented fallback if blocked; 404 page; updated navigation/internal links; updated unit/e2e tests; README Sprint 3 documentation; QA evidence and Sprint Review.
+- Dependencies: Sprint 3 plan approval; current Nuxt/Tailwind foundation; no real portfolio/testimonial data approved yet, so all public proof must remain placeholder-safe or clearly unverified.
+- Risks: Full SEO scope is broad for one day; sitemap/robots implementation may need package/config decisions; blog with Nuxt Content may require adding dependency and adjusting content structure; portfolio copy can accidentally imply real results if not guarded carefully.
+- Definition of Done: Sprint 3 follows approved scope; Nadella-style test scenarios are prepared before implementation; tests/build pass; no fake proof or secrets are committed; SEO baseline is implemented or blockers are documented; README documents only verified behavior; Scofield returns Sprint Review for Owner result approval.
+
+Sprint 3 backlog:
+- S3-QA-01: Owner Nadella; complexity S; dependency approved Sprint 3. Create test scenarios before implementation for portfolio safety, case-study placeholder behavior, blog routes/content, SEO metadata, sitemap/robots/404, responsive behavior, dark mode readability, build/test commands, and no scope creep.
+- S3-PROG-01: Owner Lincon; complexity M; dependency S3-QA-01. Build portfolio listing and case-study-safe content structure with clear placeholder/verified-content rules and no fake client claims.
+- S3-PROG-02: Owner Lincon; complexity M; dependency S3-PROG-01. Build blog listing/detail foundation using the simplest maintainable content approach, with placeholder/draft posts and no CMS/admin scope.
+- S3-PROG-03: Owner Lincon; complexity M; dependency S3-PROG-02. Add SEO baseline: per-page metadata, canonical config/helper, Open Graph/Twitter metadata, sitemap/robots baseline if feasible, 404 page, and internal links.
+- S3-PROG-04: Owner Lincon; complexity S; dependency S3-PROG-03. Add/update unit and Playwright smoke tests for portfolio/blog navigation, SEO-visible pages, 404 behavior, dark mode page visibility, and scope-safety content checks.
+- S3-QA-02: Owner Nadella; complexity M; dependency Lincon handoff. Verify Sprint 3 acceptance criteria, responsive behavior from 360px, dark mode readability, no fake proof, metadata/sitemap/robots/404, tests/build, and Git status.
+- S3-DOC-01: Owner Sara; complexity S; dependency QA PASS or approved PASS WITH NOTES. Update README and project notes only for verified Sprint 3 behavior, content editing rules, SEO baseline, known limitations, and remaining production-readiness work.
+
+Sprint 3 acceptance criteria:
+1. Portfolio listing route exists and is navigable without claiming unverified real client results.
+2. Case-study detail structure or route exists with placeholder/verified-content rules clearly enforced in content/copy.
+3. Blog listing and blog detail foundation exist using maintainable content files or typed content data.
+4. Placeholder blog content is clearly non-final and does not imply published expert claims beyond approved service knowledge.
+5. Portfolio and blog content are separated from page components where practical.
+6. Per-page SEO title/description exists for portfolio, blog, blog detail/case-study detail if implemented, and 404.
+7. Canonical/Open Graph/Twitter metadata baseline is implemented through reusable config/helper where practical.
+8. Sitemap and robots baseline are implemented, or a specific blocker is documented if the Nuxt setup requires a deferred package/config decision.
+9. 404 page exists and links users back to relevant content/contact.
+10. Navigation/internal links include portfolio/blog entry points without breaking mobile layout at 360px.
+11. Dark mode readability remains acceptable on new portfolio/blog/SEO pages.
+12. No fake testimonials, fake portfolio outcomes, fake client logos, or unverified metrics are introduced.
+13. Unit/e2e tests cover new navigation/routes and scope-safety content checks.
+14. `npm run test` and `npm run build` pass.
+15. README documents verified Sprint 3 behavior and content-editing limitations.
+
+Sprint 3 approval gate:
+- STATUS: WAITING_SPRINT_PLAN_APPROVAL.
+- Required Owner response: `APPROVE SPRINT`, `REVISION SPRINT`, or `CANCEL SPRINT`.
