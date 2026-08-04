@@ -44,7 +44,7 @@ import { homeContent } from '~/content/home'
             height="720"
           >
         </div>
-        <figcaption class="mt-3 text-sm leading-6 text-ink/62 dark:text-white/75">
+        <!-- <figcaption class="mt-3 text-sm leading-6 text-ink/62 dark:text-white/75">
           Visual sementara dari Google CDN untuk mood board, bukan bukti hasil klien.
         </figcaption>
         <div class="absolute bottom-10 left-4 right-4 rounded-lg border border-white/70 bg-white/88 p-4 shadow-soft backdrop-blur dark:border-white/15 dark:bg-[#121a21]/92 sm:left-8 sm:right-auto sm:w-80">
@@ -52,7 +52,7 @@ import { homeContent } from '~/content/home'
           <p class="mt-2 text-sm leading-6 text-ink/74 dark:text-white/85">
             Struktur halaman, CTA, dan konten disusun untuk konsultasi yang jelas sejak kunjungan pertama.
           </p>
-        </div>
+        </div> -->
       </figure>
     </div>
   </section>
