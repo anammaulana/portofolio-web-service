@@ -17,8 +17,8 @@
             class="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 text-2xl font-bold text-white shadow-lg shadow-orange-500/20">{{
               service.icon }}</span>
           <h3 class="mt-6 text-lg font-bold text-slate-950 dark:text-white">{{ service.title }}</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-white/60">{{ service.description }}</p><span
-            class="mt-auto pt-5 text-xl text-slate-400 transition group-hover:translate-x-1 group-hover:text-orange-500">→</span>
+          <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-white/60">{{ service.description }}</p>
+          <!-- <span class="mt-auto pt-5 text-xl text-slate-400 transition group-hover:translate-x-1 group-hover:text-orange-500">→</span> -->
         </article>
       </div>
     </div>

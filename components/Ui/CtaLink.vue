@@ -14,6 +14,6 @@ withDefaults(defineProps<{
       : 'border border-slate-200 bg-white/80 text-slate-900 shadow-sm backdrop-blur hover:-translate-y-0.5 hover:border-orange-200 dark:border-white/15 dark:bg-white/10 dark:text-white'"
   >
     <slot />
-    <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+    <!-- <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span> -->
   </a>
 </template>
