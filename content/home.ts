@@ -1,86 +1,53 @@
 export const homeContent = {
   seo: {
     title: 'Anam Web Studio | Jasa Pembuatan Website Profesional',
-    description: 'Website profesional untuk bisnis jasa, UMKM, dan brand yang membutuhkan tampilan premium, struktur SEO-friendly, dan pengalaman mobile yang cepat.'
+    description: 'Jasa pembuatan website profesional, cepat, responsif, dan SEO-friendly untuk UMKM, bisnis jasa, startup, serta personal brand.'
   },
   hero: {
-    eyebrow: 'Website development service',
-    title: 'Website profesional yang membuat bisnis terlihat siap dipercaya.',
-    description: 'Anam Web Studio membantu bisnis membangun website marketing yang terlihat matang, cepat dipahami, SEO-friendly, dan siap dikembangkan bertahap tanpa klaim berlebihan.',
-    primaryCta: 'Mulai diskusi',
-    secondaryCta: 'Lihat pendekatan',
-    image: {
-      src: 'https://www.gstatic.com/webp/gallery/4.jpg',
-      alt: 'Ilustrasi visual sementara dari Google CDN untuk mood board website profesional'
-    }
+    eyebrow: 'Web development service',
+    titlePrefix: 'Website profesional yang membuat bisnis Anda terlihat',
+    titleAccent: 'siap dan dipercaya.',
+    description: 'Kami membantu bisnis membangun website modern, cepat, SEO-friendly, dan siap berkembang tanpa proses yang ribet.',
+    primaryCta: 'Konsultasi gratis',
+    secondaryCta: 'Lihat portofolio'
   },
-  proofPoints: [
-    'Nuxt + TypeScript',
-    'SEO-ready structure',
-    'Mobile-first UI'
+  trust: ['Nuxt', 'Vue', 'Laravel', 'Tailwind CSS', 'TypeScript', 'PostgreSQL'],
+  services: [
+    { icon: '◎', title: 'Web Development', description: 'Website custom, modern, cepat, dan scalable.' },
+    { icon: '▣', title: 'E-Commerce', description: 'Toko online profesional yang siap membantu penjualan.' },
+    { icon: '↗', title: 'SEO Optimization', description: 'Struktur teknis agar website mudah ditemukan.' },
+    { icon: '✦', title: 'UI/UX Design', description: 'Desain nyaman digunakan dan sesuai identitas brand.' },
+    { icon: '⚡', title: 'Maintenance', description: 'Perawatan rutin agar website tetap aman dan optimal.' }
   ],
   benefits: [
-    {
-      title: 'Pesan bisnis lebih tajam',
-      description: 'Setiap section diarahkan untuk membuat pengunjung paham siapa Anda, apa yang ditawarkan, dan langkah berikutnya.'
-    },
-    {
-      title: 'UI premium yang ringan',
-      description: 'Visual dibuat bersih, modern, dan cepat dimuat dengan komponen Nuxt yang mudah dirawat.'
-    },
-    {
-      title: 'Konversi tetap natural',
-      description: 'CTA, pricing, FAQ, dan kontak disusun untuk konsultasi yang jelas tanpa janji palsu atau tekanan berlebihan.'
-    }
-  ],
-  services: [
-    'Website company profile',
-    'Landing page campaign',
-    'Website layanan profesional',
-    'Redesign website bisnis'
+    { title: 'Cepat dan responsif', description: 'Dibangun mobile-first agar nyaman dibuka di semua ukuran layar.' },
+    { title: 'SEO-friendly', description: 'Fondasi metadata, struktur konten, dan performa disiapkan sejak awal.' },
+    { title: 'Mudah dikembangkan', description: 'Kode modular sehingga fitur dapat ditambah mengikuti perkembangan bisnis.' }
   ],
   portfolio: {
-    title: 'Ruang portofolio disiapkan untuk bukti kerja terverifikasi.',
-    description: 'Sprint ini hanya menampilkan placeholder portofolio. Studi kasus, nama klien, angka performa, atau testimoni akan ditambahkan hanya ketika aset dan izin publikasi sudah tersedia.',
+    title: 'Karya digital yang dirancang untuk kebutuhan bisnis nyata.',
+    description: 'Contoh kategori project yang dapat kami kerjakan. Detail studi kasus dapat ditambahkan setelah materi project tersedia.',
     items: [
-      'Slot studi kasus terverifikasi',
-      'Preview kategori industri',
-      'Area ringkasan hasil tanpa klaim palsu'
+      { category: 'Company Profile', title: 'Website bisnis profesional', gradient: 'from-orange-100 via-white to-amber-100' },
+      { category: 'Dashboard', title: 'Sistem monitoring modern', gradient: 'from-sky-100 via-white to-indigo-100' },
+      { category: 'E-Commerce', title: 'Toko online responsif', gradient: 'from-emerald-100 via-white to-teal-100' }
     ]
   },
   process: [
-    {
-      step: '01',
-      title: 'Discovery singkat',
-      description: 'Memetakan tujuan bisnis, audience, pesan utama, dan prioritas halaman.'
-    },
-    {
-      step: '02',
-      title: 'Struktur dan desain',
-      description: 'Menyusun alur konten, komponen utama, dan tampilan responsive.'
-    },
-    {
-      step: '03',
-      title: 'Implementasi terukur',
-      description: 'Membangun foundation, melakukan verifikasi, lalu menyiapkan iterasi berikutnya.'
-    }
+    { step: '01', title: 'Konsultasi', description: 'Memahami tujuan bisnis, target pengguna, kebutuhan fitur, dan batasan project.' },
+    { step: '02', title: 'Desain', description: 'Menyusun struktur halaman dan tampilan visual yang sesuai dengan brand.' },
+    { step: '03', title: 'Development', description: 'Mengubah desain menjadi website responsif, cepat, dan mudah dirawat.' },
+    { step: '04', title: 'Review', description: 'Melakukan pengujian, revisi terarah, dan penyempurnaan sebelum rilis.' },
+    { step: '05', title: 'Launch', description: 'Website dipublikasikan dan disiapkan agar mudah dikembangkan berikutnya.' }
   ],
   faqs: [
-    {
-      question: 'Apakah Sprint 1 sudah termasuk halaman detail layanan?',
-      answer: 'Belum. Sprint 1 hanya mencakup foundation dan homepage baseline.'
-    },
-    {
-      question: 'Apakah ada testimoni atau hasil klien di halaman ini?',
-      answer: 'Tidak. Konten portofolio masih berupa placeholder sampai bukti kerja terverifikasi tersedia.'
-    },
-    {
-      question: 'Apakah website ini sudah siap dikembangkan?',
-      answer: 'Ya. Struktur komponen, layout, content data, dan test baseline disiapkan untuk sprint berikutnya.'
-    }
+    { question: 'Berapa lama proses pembuatan website?', answer: 'Umumnya 1–4 minggu, tergantung jumlah halaman, fitur, kesiapan konten, dan ruang lingkup project.' },
+    { question: 'Apakah website bisa dibuka di HP?', answer: 'Ya. Seluruh tampilan dirancang responsif untuk desktop, tablet, dan smartphone.' },
+    { question: 'Apakah sudah termasuk domain dan hosting?', answer: 'Domain dan hosting dapat disiapkan sebagai layanan tambahan sesuai kebutuhan dan anggaran.' },
+    { question: 'Apakah saya bisa meminta revisi?', answer: 'Bisa. Jumlah dan ruang lingkup revisi akan disepakati sejak awal agar timeline tetap terkendali.' }
   ],
   finalCta: {
-    title: 'Siapkan website yang terlihat serius sejak kunjungan pertama.',
-    description: 'Sprint berikutnya dapat melanjutkan ke halaman layanan, kontak, atau sistem konten setelah scope disetujui.'
+    title: 'Punya ide website untuk bisnis Anda?',
+    description: 'Ceritakan kebutuhan Anda. Kami bantu menyusun solusi yang realistis, menarik, dan siap digunakan.'
   }
 } as const

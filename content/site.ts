@@ -15,7 +15,7 @@ export const siteConfig = {
     { label: 'Terms of Service', href: '/terms' }
   ],
   cta: {
-    label: 'Konsultasi awal',
+    label: 'Konsultasi gratis',
     href: '/contact'
   }
 } as const

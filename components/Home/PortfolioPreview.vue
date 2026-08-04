@@ -1,34 +1,41 @@
-<script setup lang="ts">
-import { homeContent } from '~/content/home'
+<script setup lang="ts">import { homeContent } from '~/content/home'
 </script>
-
 <template>
-  <section id="portofolio" class="bg-white py-16 dark:bg-[#14191f] sm:py-20" aria-labelledby="portfolio-heading">
-    <div class="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-      <UiSectionHeader
-        id="portfolio-heading"
-        eyebrow="Portofolio"
-        :title="homeContent.portfolio.title"
-        :description="homeContent.portfolio.description"
-      />
-      <div class="grid gap-4 sm:grid-cols-3">
-        <article
-          v-for="(item, index) in homeContent.portfolio.items"
-          :key="item"
-          class="rounded-lg border border-dashed border-line bg-[linear-gradient(145deg,#faf8f4,#edf5f6)] p-5 dark:border-white/15 dark:bg-[linear-gradient(145deg,rgba(24,32,39,0.98),rgba(30,55,64,0.98))]"
-        >
-          <div class="mb-8 overflow-hidden rounded-md border border-line bg-white dark:border-white/12 dark:bg-white/8">
-            <img
-              :src="`https://www.gstatic.com/webp/gallery/${index + 1}.jpg`"
-              alt="Visual placeholder portofolio dari Google CDN"
-              class="h-24 w-full object-cover opacity-80 saturate-75"
-              width="320"
-              height="180"
-            >
-          </div>
-          <h3 class="text-sm font-semibold leading-6 text-ink dark:text-white/90">{{ item }}</h3>
-        </article>
-      </div>
-    </div>
-  </section>
+    <section id="portofolio" class="bg-white py-20 dark:bg-[#0b1020]">
+        <div class="container-shell">
+            <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                <UiSectionHeader eyebrow="Portofolio" :title="homeContent.portfolio.title"
+                    :description="homeContent.portfolio.description" />
+                <NuxtLink to="/portfolio"
+                    class="text-sm font-semibold text-slate-600 hover:text-orange-500 dark:text-white/70">Lihat semua
+                    project →</NuxtLink>
+            </div>
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                <article v-for="item in homeContent.portfolio.items" :key="item.title"
+                    class="group overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-white/10 dark:bg-white/5">
+                    <div :class="['relative h-64 bg-gradient-to-br p-7', item.gradient]">
+                        <div class="h-full rounded-2xl border border-white/80 bg-white/75 p-4 shadow-xl backdrop-blur">
+                            <div class="flex gap-1.5"><span class="h-2 w-2 rounded-full bg-red-300" /><span
+                                    class="h-2 w-2 rounded-full bg-amber-300" /><span
+                                    class="h-2 w-2 rounded-full bg-emerald-300" /></div>
+                            <div class="mt-5 grid grid-cols-[.7fr_1.3fr] gap-3">
+                                <div class="space-y-2">
+                                    <div class="h-4 rounded bg-slate-200" />
+                                    <div class="h-2 rounded bg-slate-100" />
+                                    <div class="h-2 w-2/3 rounded bg-slate-100" />
+                                </div>
+                                <div class="h-32 rounded-xl bg-gradient-to-br from-slate-800 to-slate-600" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs font-bold uppercase tracking-wider text-orange-500">{{ item.category }}</p>
+                        <h3 class="mt-2 text-xl font-bold text-slate-950 dark:text-white">{{ item.title }}</h3><span
+                            class="mt-4 inline-block text-sm font-semibold text-slate-500 transition group-hover:translate-x-1 group-hover:text-orange-500">Lihat
+                            detail →</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 </template>

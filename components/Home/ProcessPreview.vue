@@ -1,26 +1,18 @@
-<script setup lang="ts">
-import { homeContent } from '~/content/home'
+<script setup lang="ts">import { homeContent } from '~/content/home'
 </script>
-
 <template>
-  <section id="proses" class="section-surface py-16 sm:py-20" aria-labelledby="process-heading">
-    <div class="container-shell">
-      <UiSectionHeader
-        id="process-heading"
-        eyebrow="Proses"
-        title="Alur kerja dibuat bertahap agar scope, kualitas, dan timeline tetap terkendali."
-      />
-      <div class="mt-10 grid gap-4 md:grid-cols-3">
-        <article
-          v-for="item in homeContent.process"
-          :key="item.step"
-          class="rounded-lg bg-ink p-6 text-white shadow-[0_22px_60px_rgba(21,21,21,0.16)] dark:border dark:border-white/15 dark:bg-[#182027] dark:shadow-none"
-        >
-          <p class="text-sm font-semibold text-[#f1a37f]">{{ item.step }}</p>
-          <h3 class="mt-8 text-xl font-semibold">{{ item.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-white/82">{{ item.description }}</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    <section id="proses" class="border-y border-slate-200 bg-slate-50 py-20 dark:border-white/10 dark:bg-[#080d19]">
+        <div class="container-shell">
+            <UiSectionHeader eyebrow="Proses kerja" title="Alur sederhana, transparan, dan mudah diikuti."
+                description="Setiap tahap memiliki tujuan yang jelas agar project berjalan terarah dari awal sampai rilis." />
+            <div class="mt-12 grid gap-5 md:grid-cols-5">
+                <article v-for="item in homeContent.process" :key="item.step"
+                    class="relative rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-white/5">
+                    <span class="text-4xl font-black text-orange-100 dark:text-orange-500/20">{{ item.step }}</span>
+                    <h3 class="mt-4 text-lg font-bold text-slate-950 dark:text-white">{{ item.title }}</h3>
+                    <p class="mt-3 text-sm leading-6 text-slate-500 dark:text-white/60">{{ item.description }}</p>
+                </article>
+            </div>
+        </div>
+    </section>
 </template>
