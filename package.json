@@ -1,0 +1,30 @@
+{
+  "name": "anam-web-studio",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "typecheck": "nuxt typecheck",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "nuxt": "^3.13.2",
+    "vue": "^3.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "@playwright/test": "^1.46.1",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^15.7.4",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5",
+    "vue-tsc": "^2.1.6"
+  }
+}
