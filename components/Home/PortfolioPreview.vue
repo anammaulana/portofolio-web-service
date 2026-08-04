@@ -28,11 +28,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-1 flex-col p-5">
+                    <div class="p-6">
                         <p class="text-xs font-bold uppercase tracking-wider text-orange-500">{{ item.category }}</p>
-                        <h3 class="mt-2 text-lg font-bold text-slate-950 dark:text-white">{{ item.title }}</h3>
-                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-white/60">{{ item.description }}</p>
-                        <span class="mt-auto pt-4 inline-block text-sm font-semibold text-orange-500 transition group-hover:translate-x-1">Lihat detail →</span>
+                        <h3 class="mt-2 text-xl font-bold text-slate-950 dark:text-white">{{ item.title }}</h3><span
+                            class="mt-4 inline-block text-sm font-semibold text-slate-500 transition group-hover:translate-x-1 group-hover:text-orange-500">Lihat
+                            detail →</span>
                     </div>
                 </article>
             </div>
