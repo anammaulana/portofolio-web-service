@@ -30,9 +30,10 @@
                     </div>
                     <div class="p-6">
                         <p class="text-xs font-bold uppercase tracking-wider text-orange-500">{{ item.category }}</p>
-                        <h3 class="mt-2 text-xl font-bold text-slate-950 dark:text-white">{{ item.title }}</h3><span
+                        <h3 class="mt-2 text-xl font-bold text-slate-950 dark:text-white">{{ item.title }}</h3>
+                        <!-- <span
                             class="mt-4 inline-block text-sm font-semibold text-slate-500 transition group-hover:translate-x-1 group-hover:text-orange-500">Lihat
-                            detail →</span>
+                            detail →</span> -->
                     </div>
                 </article>
             </div>
