@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { businessContent } from '../../content/business'
 import { blogContent } from '../../content/blog'
+import { businessContent } from '../../content/business'
 import { homeContent } from '../../content/home'
 import { legalContent } from '../../content/legal'
 import { portfolioContent } from '../../content/portfolio'
@@ -10,7 +10,7 @@ import { buildQuoteMessage, buildWhatsAppHref, validateQuoteForm } from '../../u
 
 describe('home content baseline', () => {
   it('defines the required homepage sections and unique metadata', () => {
-    expect(homeContent.seo.title).toContain('Anam Web Studio')
+    expect(homeContent.seo.title).toContain('Anam Maulana')
     expect(homeContent.seo.description.toLowerCase()).toContain('website')
     expect(homeContent.benefits).toHaveLength(3)
     expect(homeContent.trust).toContain('Nuxt')
@@ -89,7 +89,7 @@ describe('home content baseline', () => {
     }))).toEqual(['name', 'businessType', 'projectNeed', 'budgetRange', 'timeline'])
 
     const validForm = {
-      name: 'Anam',
+      name: 'Anam Maulana',
       businessType: 'Jasa profesional',
       projectNeed: 'Butuh website company profile dengan halaman layanan.',
       budgetRange: 'Rp3.500.000 - Rp7.500.000',

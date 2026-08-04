@@ -20,7 +20,7 @@ export const validateQuoteForm = (form: QuoteFormState) => {
 }
 
 export const buildQuoteMessage = (form: QuoteFormState) => [
-  'Halo Anam Web Studio, saya ingin konsultasi kebutuhan website.',
+  'Halo Anam Maulana, saya ingin konsultasi kebutuhan website.',
   '',
   `Nama: ${form.name.trim()}`,
   `Tipe bisnis: ${form.businessType.trim()}`,

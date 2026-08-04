@@ -8,13 +8,13 @@ const structuredData = computed(() => ({
   '@graph': [
     {
       '@type': 'WebSite',
-      name: 'Anam Web Studio',
+      name: 'Anam Maulana',
       url: buildCanonicalUrl('/', siteUrl),
       inLanguage: 'id-ID'
     },
     {
       '@type': 'Organization',
-      name: 'Anam Web Studio',
+      name: 'Anam Maulana',
       url: buildCanonicalUrl('/', siteUrl)
     },
     {
@@ -22,7 +22,7 @@ const structuredData = computed(() => ({
       name: 'Jasa pembuatan website profesional',
       provider: {
         '@type': 'Organization',
-        name: 'Anam Web Studio'
+        name: 'Anam Maulana'
       },
       areaServed: 'Indonesia',
       serviceType: 'Website development service',

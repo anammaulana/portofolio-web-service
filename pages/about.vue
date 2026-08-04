@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { businessContent } from '~/content/business'
+import { businessContent } from '~/content/business';
 
 const content = businessContent.about
 
@@ -22,7 +22,7 @@ useSeoMeta({
         </p>
         <img
           src="https://www.gstatic.com/webp/gallery/5.jpg"
-          alt="Visual sementara dari Google CDN untuk halaman tentang Anam Web Studio"
+          alt="Visual sementara dari Google CDN untuk halaman tentang Anam Maulana"
           class="mt-8 h-64 w-full rounded-lg object-cover shadow-soft"
           width="720"
           height="420"

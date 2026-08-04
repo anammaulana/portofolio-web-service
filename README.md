@@ -1,6 +1,6 @@
-# Anam Web Studio
+# Anam Maulana
 
-Nuxt 3 website foundation for Anam Web Studio's professional website development service.
+Nuxt 3 website foundation for Anam Maulana's professional website development service.
 
 ## Implemented Scope
 
@@ -82,7 +82,7 @@ Verified Sprint 1 behavior:
 - Navigation works on desktop.
 - Hamburger menu opens and closes on a 360px viewport.
 - Homepage has exactly one primary `h1`.
-- Homepage title and meta description are customized for Anam Web Studio.
+- Homepage title and meta description are customized for Anam Maulana.
 - Portfolio area is a placeholder and does not claim fake testimonials, client names, or unverified results.
 - `.env.example` contains placeholder-only WhatsApp configuration.
 - Unit tests, Playwright e2e smoke tests, and production build are part of the verified Sprint 1 baseline.

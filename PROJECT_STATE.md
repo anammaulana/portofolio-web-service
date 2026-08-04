@@ -1,6 +1,6 @@
 # Project State
 
-Project name: Anam Web Studio - Professional Website Development Service
+Project name: Anam Maulana - Professional Website Development Service
 
 Project objective: Build a professional, SEO-friendly Nuxt website for Anam Maulana's website development service to increase trust, showcase services and portfolio, and convert visitors into WhatsApp consultation or order leads.
 
@@ -77,7 +77,7 @@ Approved business rules:
 - Privacy and Terms pages must explain form data usage and that candidate customer data is not shared.
 
 Decisions:
-- 2026-08-01: Owner requested new project intake for Anam Web Studio and provided detailed initial requirement.
+- 2026-08-01: Owner requested new project intake for Anam Maulana and provided detailed initial requirement.
 - 2026-08-01: Scofield recorded proposed requirement v1 and set status to WAITING_REQUIREMENT_APPROVAL.
 - 2026-08-01: Owner approved requirement v1 via `APPROVE REQUIREMENT`.
 - 2026-08-01: Scofield prepared Sprint 1 plan for approval gate; no implementation delegated.
@@ -186,7 +186,7 @@ Sprint 1 implementation handoff:
 - Added responsive navigation and mobile hamburger behavior.
 - Added `.env.example` with placeholder-only WhatsApp configuration.
 - Added README setup and verification commands.
-- Commit: `a9d0541 feat: scaffold anam web studio homepage`.
+- Commit: `a9d0541 feat: scaffold Anam Maulana homepage`.
 - Parent verification by Scofield: `npm run test` passed after rerun, `npm run build` passed. Initial parallel test/build attempt failed due Nuxt process lock and is not counted as implementation failure.
 
 Sprint 1 QA verification result:
@@ -303,11 +303,11 @@ Sprint 2 review:
 
 Sprint 2 revision request:
 - Owner requested revision before moving forward because the public repository history still showed commit `fcd635b Initialize Scofield AI freelance workspace`, which originated from the previous workspace/setup repository history.
-- Required correction: keep project remote as `https://github.com/anammaulana/portofolio-web-service.git`, create a clean `main` history from the current Anam Web Studio source tree, and push the corrected history to the approved project repository.
+- Required correction: keep project remote as `https://github.com/anammaulana/portofolio-web-service.git`, create a clean `main` history from the current Anam Maulana source tree, and push the corrected history to the approved project repository.
 - Out of scope: new feature work, Sprint 3 planning, UI refactor beyond Git/history cleanup, and changes to unrelated workspace directories.
 
 Sprint 2 revision result:
-- Correction completed: `main` on `https://github.com/anammaulana/portofolio-web-service.git` now points to clean project-only history, latest commit `79a401e chore: initialize anam web studio project`.
+- Correction completed: `main` on `https://github.com/anammaulana/portofolio-web-service.git` now points to clean project-only history, latest commit `79a401e chore: initialize Anam Maulana project`.
 - Remote root now contains project files directly: `package.json`, `app.vue`, `pages`, `components`, `content`, `layouts`, `tests`, and related Nuxt config files.
 - Old workspace-root commit `fcd635b` is no longer in the `origin/main` ancestry after the force-with-lease update.
 - Local `projects/anam-web-studio` is now initialized as its own Git repository with `origin` set to `https://github.com/anammaulana/portofolio-web-service.git` and `main` tracking `origin/main`.

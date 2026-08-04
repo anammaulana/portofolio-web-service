@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'Anam Web Studio',
+  name: 'Anam Maulana',
   tagline: 'Build · Design · Optimize',
   description: 'Jasa pembuatan website profesional untuk UMKM, bisnis jasa, personal brand, dan perusahaan yang ingin tampil lebih kredibel di internet.',
   navItems: [

@@ -2,8 +2,8 @@
 setResponseStatus(404)
 
 usePageSeo({
-  title: 'Halaman Tidak Ditemukan | Anam Web Studio',
-  description: 'Halaman yang dicari belum tersedia. Kembali ke layanan, portfolio, blog, atau kontak Anam Web Studio.',
+  title: 'Halaman Tidak Ditemukan | Anam Maulana',
+  description: 'Halaman yang dicari belum tersedia. Kembali ke layanan, portfolio, blog, atau kontak Anam Maulana.',
   path: '/404'
 })
 </script>

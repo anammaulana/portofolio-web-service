@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { siteConfig } from '~/content/site'
+import { siteConfig } from '~/content/site';
 
 const year = new Date().getFullYear()
 </script>
@@ -44,7 +44,7 @@ const year = new Date().getFullYear()
       </div>
     </div>
     <div class="border-t border-slate-200 py-5 dark:border-white/10">
-      <div class="container-shell text-sm text-slate-500 dark:text-white/50">© {{ year }} Anam Web Studio. All rights reserved.</div>
+      <div class="container-shell text-sm text-slate-500 dark:text-white/50">© {{ year }} Anam Maulana. All rights reserved.</div>
     </div>
   </footer>
 </template>

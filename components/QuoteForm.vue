@@ -37,7 +37,7 @@ const submit = () => {
   submitted.value = true
 
   if (whatsappHref.value) {
-    window.location.href = whatsappHref.value
+    window.open(whatsappHref.value, '_blank')
   }
 }
 </script>
@@ -45,9 +45,10 @@ const submit = () => {
 <template>
   <form class="panel-surface rounded-lg p-6" novalidate @submit.prevent="submit">
     <div>
-      <h2 class="text-xl font-semibold text-ink dark:text-white">Request quote</h2>
+      <h2 class="text-xl font-semibold text-ink dark:text-white">Mulai Konsultasi Proyek</h2>
       <p class="mt-3 text-sm leading-6 muted-copy">
-        Isi kebutuhan awal. Website tidak menyimpan submission ke database; pesan hanya disiapkan untuk WhatsApp.
+        Jelaskan kebutuhan website atau aplikasi yang ingin Anda bangun. Saya akan membantu menyusun solusi, estimasi
+        waktu pengerjaan, dan penawaran yang sesuai tanpa biaya konsultasi.
       </p>
     </div>
 
@@ -101,9 +102,9 @@ const submit = () => {
             name="budgetRange"
           >
             <option value="">Pilih budget</option>
-            <option>Rp3.500.000 - Rp7.500.000</option>
-            <option>Rp7.500.000 - Rp12.500.000</option>
-            <option>Di atas Rp12.500.000</option>
+            <option>Rp2.500.000 - Rp4.500.000</option>
+            <option>Rp4.500.000 - Rp7.500.000</option>
+            <option>Di atas Rp10.500.000</option>
             <option>Butuh diskusi dulu</option>
           </select>
           <span v-if="errors.budgetRange" class="text-sm text-copper dark:text-[#f1a37f]">{{ errors.budgetRange }}</span>

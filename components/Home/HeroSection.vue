@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { homeContent } from '~/content/home'
+import { homeContent } from '~/content/home';
 </script>
 
 <template>
@@ -45,7 +45,7 @@ import { homeContent } from '~/content/home'
           <div class="overflow-hidden rounded-[14px] bg-white dark:bg-[#111827]">
             <div class="flex items-center justify-between border-b border-slate-100 px-5 py-3 dark:border-white/10">
               <div class="flex items-center gap-2"><span class="h-5 w-5 rounded-md bg-orange-500" /><span
-                  class="text-xs font-bold text-slate-900 dark:text-white">Anam Web Studio</span></div>
+                  class="text-xs font-bold text-slate-900 dark:text-white">Anam Maulana</span></div>
               <div class="flex gap-3 text-[9px] text-slate-500">
                 <span>Tentang</span><span>Layanan</span><span>Harga</span><span>Proses</span>
               </div>

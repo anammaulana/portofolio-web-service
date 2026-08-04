@@ -1,6 +1,6 @@
 export const portfolioContent = {
-  seoTitle: 'Portfolio Website | Anam Web Studio',
-  seoDescription: 'Struktur portfolio Anam Web Studio untuk studi kasus yang hanya akan dipublikasikan setelah data, aset, dan izin publikasi terverifikasi.',
+  seoTitle: 'Portfolio Website | Anam Maulana',
+  seoDescription: 'Struktur portfolio Anam Maulana untuk studi kasus yang hanya akan dipublikasikan setelah data, aset, dan izin publikasi terverifikasi.',
   title: 'Portfolio disiapkan untuk studi kasus yang terverifikasi, bukan klaim palsu.',
   description: 'Halaman ini memakai placeholder aman sampai aset project, izin publikasi, dan hasil kerja benar-benar tersedia untuk dipublikasikan.',
   safetyNote: 'Nama klien, logo, angka performa, testimoni, dan hasil bisnis tidak ditampilkan sebelum diverifikasi.',

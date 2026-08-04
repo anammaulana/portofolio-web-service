@@ -1,8 +1,8 @@
 export const businessContent = {
   about: {
-    seoTitle: 'Tentang Anam Web Studio | Website Profesional',
+    seoTitle: 'Tentang Anam Maulana | Website Profesional',
     title: 'Partner website development untuk bisnis yang ingin tampil rapi dan dipercaya.',
-    description: 'Anam Web Studio membantu bisnis jasa, UMKM, dan brand profesional membangun website marketing yang jelas, responsif, dan mudah dikembangkan bertahap.',
+    description: 'Anam Maulana membantu bisnis jasa, UMKM, dan brand profesional membangun website marketing yang jelas, responsif, dan mudah dikembangkan bertahap.',
     values: [
       'Scope dikunci sebelum implementasi agar biaya dan timeline tetap terkendali.',
       'Konten disusun untuk menjawab kebutuhan calon pelanggan, bukan sekadar memenuhi halaman.',
@@ -10,7 +10,7 @@ export const businessContent = {
     ]
   },
   services: {
-    seoTitle: 'Layanan Website | Anam Web Studio',
+    seoTitle: 'Layanan Website | Anam Maulana',
     title: 'Layanan inti untuk membangun fondasi digital yang siap dipakai.',
     description: 'Paket layanan dapat disesuaikan setelah discovery singkat dan approval scope.',
     items: [
@@ -33,7 +33,7 @@ export const businessContent = {
     ]
   },
   pricing: {
-    seoTitle: 'Pricing Website | Anam Web Studio',
+    seoTitle: 'Pricing Website | Anam Maulana',
     title: 'Estimasi awal yang transparan, bukan harga final yang dijamin.',
     description: 'Harga final ditentukan setelah kebutuhan, jumlah halaman, konten, integrasi, dan deadline disepakati.',
     packages: [
@@ -59,7 +59,7 @@ export const businessContent = {
     note: 'Estimasi di atas tidak termasuk biaya domain, hosting, aset premium, integrasi pihak ketiga berbayar, atau fitur di luar scope yang disetujui.'
   },
   process: {
-    seoTitle: 'Proses Kerja | Anam Web Studio',
+    seoTitle: 'Proses Kerja | Anam Maulana',
     title: 'Proses kerja bertahap agar keputusan tetap jelas.',
     steps: [
       {
@@ -85,7 +85,7 @@ export const businessContent = {
     ]
   },
   faq: {
-    seoTitle: 'FAQ | Anam Web Studio',
+    seoTitle: 'FAQ | Anam Maulana',
     title: 'Pertanyaan yang sering muncul sebelum mulai project.',
     items: [
       {
@@ -107,13 +107,15 @@ export const businessContent = {
     ]
   },
   contact: {
-    seoTitle: 'Konsultasi Website | Anam Web Studio',
-    title: 'Mulai konsultasi awal dengan scope yang jelas.',
-    description: 'Ceritakan kebutuhan website, target pengguna, halaman yang dibutuhkan, deadline, dan batasan budget jika ada.',
+    seoTitle: 'Konsultasi Proyek | Anam Maulana',
+    title: 'Mari diskusikan kebutuhan proyek Anda.',
+    description:
+      'Setiap proyek dimulai dari pemahaman yang baik. Ceritakan tujuan bisnis, kebutuhan fitur, target pengguna, serta timeline yang diharapkan. Saya akan membantu menyusun solusi yang tepat beserta estimasi waktu dan biaya secara transparan.',
     channels: [
-      'WhatsApp CTA memakai NUXT_PUBLIC_WHATSAPP_NUMBER jika tersedia.',
-      'Tanpa nomor publik, tombol tetap menjadi placeholder aman.',
-      'Jangan kirim password, token, private key, atau credential produksi melalui form konsultasi.'
+      '💬 Konsultasi awal gratis tanpa komitmen.',
+      '⚡ Respon cepat melalui WhatsApp pada jam kerja.',
+      '📋 Estimasi biaya dan timeline disesuaikan dengan kebutuhan proyek.',
+      '🤝 Siap mengerjakan website company profile, landing page, dashboard, hingga aplikasi web custom.'
     ]
   }
 } as const

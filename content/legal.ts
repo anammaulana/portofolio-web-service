@@ -1,48 +1,74 @@
 export const legalContent = {
   privacy: {
-    seoTitle: 'Privacy Policy | Anam Web Studio',
-    description: 'Ringkasan cara Anam Web Studio menangani informasi konsultasi awal secara aman dan terbatas.',
+    seoTitle: 'Privacy Policy | Anam Maulana',
+    description:
+      'Kebijakan privasi mengenai pengelolaan informasi yang dikirim melalui website anammaulana.com.',
     title: 'Privacy Policy',
     sections: [
       {
-        title: 'Informasi yang dikirim',
-        body: 'Form konsultasi hanya meminta informasi dasar seperti nama, tipe bisnis, kebutuhan website, estimasi budget, dan timeline. Jangan mengirim password, token, private key, data pelanggan sensitif, atau credential produksi.'
+        title: 'Informasi yang Kami Kumpulkan',
+        body:
+          'Saat Anda menghubungi kami melalui formulir kontak atau WhatsApp, kami dapat menerima informasi seperti nama, alamat email, nomor telepon, nama perusahaan, dan detail kebutuhan proyek yang Anda berikan secara sukarela.'
       },
       {
-        title: 'Penggunaan informasi',
-        body: 'Informasi digunakan untuk memahami kebutuhan awal, menyusun scope, dan menyiapkan estimasi. Data tidak dijual atau dibagikan ke pihak lain untuk kebutuhan marketing.'
+        title: 'Penggunaan Informasi',
+        body:
+          'Informasi yang Anda berikan digunakan untuk menanggapi pertanyaan, memberikan konsultasi, menyusun proposal, estimasi biaya, serta meningkatkan kualitas layanan. Kami tidak menjual, menyewakan, atau membagikan data pribadi Anda kepada pihak ketiga tanpa persetujuan, kecuali diwajibkan oleh hukum.'
       },
       {
-        title: 'Penyimpanan data',
-        body: 'Website Sprint 4 tidak menyimpan submission ke database atau backend. Jika WhatsApp dikonfigurasi, pesan dikirim melalui aplikasi WhatsApp pengguna.'
+        title: 'Penyimpanan dan Keamanan Data',
+        body:
+          'Website ini tidak menyimpan password, private key, token API, informasi kartu pembayaran, atau data rahasia lainnya. Informasi yang dikirim hanya digunakan untuk kebutuhan komunikasi dan penyusunan penawaran layanan.'
       },
       {
-        title: 'Batasan',
-        body: 'Kebijakan ini adalah baseline website layanan dan perlu review legal formal sebelum production final jika bisnis membutuhkan kepatuhan khusus.'
+        title: 'Layanan Pihak Ketiga',
+        body:
+          'Website ini dapat menggunakan layanan pihak ketiga seperti Google Analytics, Google Search Console, dan WhatsApp. Masing-masing layanan memiliki kebijakan privasi tersendiri.'
+      },
+      {
+        title: 'Perubahan Kebijakan',
+        body:
+          'Kebijakan privasi ini dapat diperbarui sesuai perkembangan layanan atau perubahan peraturan yang berlaku.'
       }
     ]
   },
+
   terms: {
-    seoTitle: 'Terms of Service | Anam Web Studio',
-    description: 'Ketentuan awal layanan Anam Web Studio untuk konsultasi, scope, estimasi, dan batasan klaim.',
-    title: 'Terms of Service',
+    seoTitle: 'Terms and Conditions | Anam Maulana',
+    description:
+      'Syarat dan ketentuan penggunaan website serta layanan pembuatan website Anam Maulana.',
+    title: 'Terms and Conditions',
     sections: [
       {
-        title: 'Konsultasi awal',
-        body: 'Konsultasi awal bertujuan memahami kebutuhan website dan belum menjadi komitmen pengerjaan sampai scope, biaya, timeline, dan deliverables disetujui.'
+        title: 'Penggunaan Website',
+        body:
+          'Website ini menyediakan informasi mengenai layanan pembuatan website, portofolio, artikel, dan sarana untuk menghubungi penyedia layanan.'
       },
       {
-        title: 'Estimasi dan scope',
-        body: 'Harga di website memakai wording Mulai dari. Estimasi final ditentukan setelah kebutuhan, jumlah halaman, konten, integrasi, dan deadline disepakati.'
+        title: 'Penawaran dan Harga',
+        body:
+          'Harga yang ditampilkan merupakan estimasi awal. Harga final, ruang lingkup pekerjaan, jadwal, dan ketentuan pembayaran akan disepakati melalui proposal atau perjanjian kerja.'
       },
       {
-        title: 'Konten dan aset',
-        body: 'Nama klien, logo, testimoni, angka performa, dan studi kasus hanya dipublikasikan setelah data dan izin publikasi terverifikasi.'
+        title: 'Proses Pengerjaan',
+        body:
+          'Pengerjaan dimulai setelah ruang lingkup proyek, jadwal, kebutuhan teknis, dan ketentuan pembayaran disetujui oleh kedua pihak.'
       },
       {
-        title: 'Batasan jaminan',
-        body: 'Website ini tidak menjanjikan hasil bisnis, ranking SEO, revenue, atau conversion tertentu tanpa data dan pengukuran yang disepakati.'
+        title: 'Tanggung Jawab Klien',
+        body:
+          'Klien bertanggung jawab menyediakan materi, akses, informasi, dan persetujuan yang diperlukan agar proyek dapat dikerjakan sesuai jadwal.'
+      },
+      {
+        title: 'Hasil dan Performa',
+        body:
+          'Hasil proyek dapat dipengaruhi oleh kualitas materi, strategi pemasaran, kondisi pasar, layanan pihak ketiga, dan faktor lain di luar kendali penyedia layanan.'
+      },
+      {
+        title: 'Perubahan Ketentuan',
+        body:
+          'Syarat dan ketentuan ini dapat diperbarui sewaktu-waktu. Versi terbaru akan tersedia pada halaman ini.'
       }
     ]
   }
-} as const
+}

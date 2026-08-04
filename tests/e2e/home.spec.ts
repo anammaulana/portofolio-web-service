@@ -4,7 +4,7 @@ test.describe('homepage smoke', () => {
   test('renders all Sprint 1 homepage sections with one primary heading', async ({ page }) => {
     await page.goto('/')
 
-    await expect(page).toHaveTitle(/Anam Web Studio \| Jasa Pembuatan Website Profesional/)
+    await expect(page).toHaveTitle(/Anam Maulana \| Jasa Pembuatan Website Profesional/)
     await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Website profesional/)
     await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Website profesional')
@@ -168,7 +168,7 @@ test.describe('homepage smoke', () => {
     await page.getByLabel('Nama').fill('Anam')
     await page.getByLabel('Tipe bisnis').fill('Jasa profesional')
     await page.getByLabel('Kebutuhan website').fill('Butuh website company profile dengan halaman layanan.')
-    await page.getByLabel('Estimasi budget').selectOption('Rp3.500.000 - Rp7.500.000')
+    await page.getByLabel('Estimasi budget').selectOption('Rp2.500.000 - Rp4  .500.000')
     await page.getByLabel('Timeline').selectOption('3-4 minggu')
     await page.getByLabel('Website saat ini (opsional)').fill('https://example.com')
     await page.waitForTimeout(900)

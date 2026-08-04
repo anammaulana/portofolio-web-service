@@ -10,7 +10,7 @@ if (!post) {
 }
 
 usePageSeo({
-  title: `${post.title} | Blog Anam Web Studio`,
+  title: `${post.title} | Blog Anam Maulana`,
   description: post.excerpt,
   path: `/blog/${post.slug}`
 })

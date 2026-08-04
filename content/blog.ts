@@ -1,6 +1,6 @@
 export const blogContent = {
-  seoTitle: 'Blog Website Development | Anam Web Studio',
-  seoDescription: 'Draft blog Anam Web Studio tentang strategi website, SEO dasar, dan proses project yang aman untuk pengembangan bertahap.',
+  seoTitle: 'Blog Website Development | Anam Maulana',
+  seoDescription: 'Draft blog Anam Maulana tentang strategi website, SEO dasar, dan proses project yang aman untuk pengembangan bertahap.',
   title: 'Blog draft untuk edukasi calon pelanggan sebelum mulai project.',
   description: 'Artikel sementara ini membantu menyusun arah konten. Semua tulisan dapat direvisi sebelum publish final.',
   posts: [

@@ -1,7 +1,7 @@
 export const homeContent = {
   seo: {
-    title: 'Jasa Pembuatan Website Profesional | Anam Web Studio',
-    description: 'Anam Web Studio membantu UMKM, bisnis jasa, personal brand, dan perusahaan membuat website profesional, cepat, responsif, serta SEO-friendly.'
+    title: 'Jasa Pembuatan Website Profesional | Anam Maulana',
+    description: 'Anam Maulana membantu UMKM, bisnis jasa, personal brand, dan perusahaan membuat website profesional, cepat, responsif, serta SEO-friendly.'
   },
   hero: {
     eyebrow: 'Jasa pembuatan website profesional',

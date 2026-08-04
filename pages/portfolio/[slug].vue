@@ -10,7 +10,7 @@ if (!item) {
 }
 
 usePageSeo({
-  title: `${item.title} | Portfolio Anam Web Studio`,
+  title: `${item.title} | Portfolio Anam Maulana`,
   description: item.summary,
   path: `/portfolio/${item.slug}`,
   image: item.image
