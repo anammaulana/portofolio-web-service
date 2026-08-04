@@ -2,19 +2,18 @@
 withDefaults(defineProps<{
   href: string
   variant?: 'primary' | 'secondary'
-}>(), {
-  variant: 'primary'
-})
+}>(), { variant: 'primary' })
 </script>
 
 <template>
   <a
     :href="href"
-    class="inline-flex min-h-11 items-center justify-center rounded-md px-5 text-sm font-semibold transition"
+    class="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-bold transition duration-300"
     :class="variant === 'primary'
-      ? 'bg-ink text-white hover:bg-ink/88 dark:bg-white dark:text-[#14161a] dark:hover:bg-white/88'
-      : 'border border-line bg-white/70 text-ink hover:border-ink dark:border-white/18 dark:bg-white/8 dark:text-white dark:hover:border-white/42'"
+      ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-[0_14px_35px_rgba(249,115,22,.28)] hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(249,115,22,.38)]'
+      : 'border border-slate-200 bg-white/80 text-slate-900 shadow-sm backdrop-blur hover:-translate-y-0.5 hover:border-orange-200 dark:border-white/15 dark:bg-white/10 dark:text-white'"
   >
     <slot />
+    <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
   </a>
 </template>
