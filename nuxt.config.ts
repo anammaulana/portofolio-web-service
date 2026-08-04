@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+
   compatibilityDate: '2026-08-01',
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
@@ -27,6 +28,14 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
+        },
+        {
+          rel: 'icon',
+          href: '/favicon.ico'
+        },
+        {
+          rel: 'apple-touch-icon',
+          href: '/favicon.ico'
         }
       ]
     }
