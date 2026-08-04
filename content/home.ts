@@ -26,14 +26,45 @@ export const homeContent = {
     { title: 'Siap dikembangkan', description: 'Struktur kode modular sehingga fitur baru dapat ditambahkan saat bisnis Anda berkembang.' }
   ],
   portfolio: {
-    title: 'Beberapa contoh project sebagai gambaran kualitas kami',
-    description: 'Project berikut merupakan demo konsep yang menunjukkan jenis tampilan dan solusi yang dapat kami kerjakan untuk kebutuhan bisnis Anda.',
+    title: 'Project & Portfolio',
+    description:
+      'Beberapa project berikut menunjukkan pengalaman saya dalam membangun website dan aplikasi modern. Sebagian merupakan personal project, demo, atau studi kasus yang merepresentasikan kemampuan teknis dan pendekatan pengembangan yang saya terapkan.',
     items: [
-      { category: 'Company Profile', title: 'Demo Website Company Profile', description: 'Website profesional untuk memperkenalkan bisnis, layanan, dan meningkatkan kepercayaan calon pelanggan.', gradient: 'from-violet-100 via-white to-indigo-100' },
-      { category: 'Landing Page', title: 'Demo Landing Page UMKM', description: 'Landing page fokus promosi dengan informasi ringkas dan tombol tindakan yang jelas.', gradient: 'from-emerald-100 via-white to-lime-100' },
-      { category: 'E-Commerce', title: 'Demo Toko Online', description: 'Tampilan toko online modern dengan katalog produk dan alur belanja yang mudah.', gradient: 'from-orange-100 via-white to-amber-100' },
-      { category: 'Personal Brand', title: 'Demo Personal Portfolio', description: 'Portofolio profesional untuk freelancer, kreator, konsultan, dan pencari kerja.', gradient: 'from-slate-100 via-white to-zinc-100' },
-      { category: 'UI/UX Study', title: 'Studi Kasus Desain', description: 'Eksplorasi antarmuka modern untuk berbagai kebutuhan produk digital.', gradient: 'from-sky-100 via-white to-cyan-100' }
+      {
+        category: 'Personal Website',
+        title: 'Personal Portfolio Website',
+        description:
+          'Website portfolio modern berbasis Nuxt dengan fokus pada performa, SEO, responsive design, dan pengalaman pengguna.',
+        gradient: 'from-orange-100 via-white to-amber-100'
+      },
+      {
+        category: 'Web Application',
+        title: 'Freelance Job & Invoice Tracker',
+        description:
+          'Aplikasi manajemen proyek freelance untuk mengelola klien, invoice, pembayaran, dan laporan keuangan.',
+        gradient: 'from-blue-100 via-white to-cyan-100'
+      },
+      {
+        category: 'Artificial Intelligence',
+        title: 'AI Multi-Agent Workspace',
+        description:
+          'Workspace AI menggunakan OpenClaw untuk membantu workflow software development mulai dari planning hingga dokumentasi.',
+        gradient: 'from-violet-100 via-white to-fuchsia-100'
+      },
+      {
+        category: 'Dashboard',
+        title: 'Monitoring Dashboard',
+        description:
+          'Dashboard interaktif dengan visualisasi data, filter, export laporan, dan autentikasi pengguna.',
+        gradient: 'from-emerald-100 via-white to-lime-100'
+      },
+      {
+        category: 'Website Demo',
+        title: 'Company Profile & Landing Page',
+        description:
+          'Contoh website modern untuk company profile, landing page, dan bisnis UMKM yang mengutamakan desain profesional dan optimasi SEO.',
+        gradient: 'from-slate-100 via-white to-zinc-100'
+      }
     ]
   },
   process: [

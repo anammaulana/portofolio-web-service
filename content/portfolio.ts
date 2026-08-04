@@ -1,44 +1,91 @@
 export const portfolioContent = {
-  seoTitle: 'Portfolio Website | Anam Maulana',
-  seoDescription: 'Struktur portfolio Anam Maulana untuk studi kasus yang hanya akan dipublikasikan setelah data, aset, dan izin publikasi terverifikasi.',
-  title: 'Portfolio disiapkan untuk studi kasus yang terverifikasi, bukan klaim palsu.',
-  description: 'Halaman ini memakai placeholder aman sampai aset project, izin publikasi, dan hasil kerja benar-benar tersedia untuk dipublikasikan.',
-  safetyNote: 'Nama klien, logo, angka performa, testimoni, dan hasil bisnis tidak ditampilkan sebelum diverifikasi.',
+  seoTitle: 'Portfolio | Anam Maulana',
+  seoDescription:
+    'Kumpulan project website dan aplikasi yang dikembangkan menggunakan teknologi modern.',
+  title: 'Project & Portfolio',
+  description:
+    'Beberapa project berikut merupakan personal project, demo, dan studi kasus yang menunjukkan pengalaman saya dalam membangun website dan aplikasi modern.',
+  safetyNote:
+    'Beberapa project menggunakan gambar placeholder sebagai ilustrasi. Screenshot asli akan diperbarui seiring perkembangan project dan izin publikasi.',
+
   items: [
     {
-      slug: 'company-profile-service-business',
-      title: 'Company Profile untuk Bisnis Jasa',
-      category: 'Website layanan profesional',
-      status: 'Placeholder terverifikasi nanti',
-      summary: 'Struktur studi kasus untuk website bisnis jasa dengan fokus pesan layanan, trust section, dan CTA konsultasi.',
-      challenge: 'Calon pelanggan perlu memahami layanan, proses kerja, dan langkah konsultasi tanpa membaca halaman panjang.',
-      approach: 'Menyusun alur halaman yang menampilkan value proposition, layanan utama, proses, FAQ, dan CTA yang konsisten.',
-      outcome: 'Belum ada klaim hasil. Area outcome disiapkan untuk data yang akan diverifikasi Owner sebelum publish.',
-      image: 'https://www.gstatic.com/webp/gallery/1.jpg'
+      slug: 'personal-portfolio',
+      title: 'Personal Portfolio Website',
+      category: 'Nuxt.js',
+      status: 'Live',
+      summary:
+        'Website portfolio modern dengan fokus pada performa, SEO, dark mode, dan responsive design.',
+      challenge:
+        'Membangun personal branding yang profesional sekaligus menjaga performa website tetap optimal.',
+      approach:
+        'Dikembangkan menggunakan Nuxt, TypeScript, Tailwind CSS, dan optimasi SEO.',
+      outcome:
+        'Website siap digunakan sebagai media promosi jasa pembuatan website.',
+      image: 'https://placehold.co/1200x800/F8FAFC/94A3B8?text=Portfolio+Preview'
     },
     {
-      slug: 'landing-page-campaign',
-      title: 'Landing Page Campaign',
-      category: 'Conversion page',
-      status: 'Placeholder terverifikasi nanti',
-      summary: 'Struktur studi kasus untuk campaign page dengan offer yang jelas, section ringkas, dan CTA tunggal.',
-      challenge: 'Campaign butuh halaman cepat dipahami yang tidak membingungkan pengunjung dengan terlalu banyak pilihan.',
-      approach: 'Membuat flow konten dari problem, offer, benefit, process, FAQ, sampai contact action.',
-      outcome: 'Belum ada klaim performa. Data conversion hanya akan ditambahkan setelah tersedia dan disetujui.',
-      image: 'https://www.gstatic.com/webp/gallery/2.jpg'
+      slug: 'freelance-job-tracker',
+      title: 'Freelance Job & Invoice Tracker',
+      category: 'Laravel',
+      status: 'Personal Project',
+      summary:
+        'Aplikasi untuk mengelola client, project, invoice, pembayaran, dan laporan keuangan.',
+      challenge:
+        'Menyederhanakan administrasi project freelance dalam satu aplikasi.',
+      approach:
+        'Laravel, SQLite, Tailwind CSS, dan dashboard interaktif.',
+      outcome:
+        'Mempermudah pengelolaan project dan invoice.',
+      image: 'https://placehold.co/1200x800/F8FAFC/94A3B8?text=Portfolio+Preview'
     },
     {
-      slug: 'business-website-redesign',
-      title: 'Redesign Website Bisnis',
-      category: 'Website redesign',
-      status: 'Placeholder terverifikasi nanti',
-      summary: 'Struktur studi kasus redesign untuk merapikan navigasi, hierarchy visual, dan pengalaman mobile.',
-      challenge: 'Website lama sering punya konten penting, tetapi susunan halaman dan CTA belum membantu calon pelanggan mengambil keputusan.',
-      approach: 'Audit konten, susun ulang section, perbaiki visual hierarchy, dan pastikan mobile-first navigation.',
-      outcome: 'Belum ada angka hasil. Dampak redesign harus divalidasi sebelum ditampilkan sebagai bukti.',
-      image: 'https://www.gstatic.com/webp/gallery/3.jpg'
+      slug: 'ai-workspace',
+      title: 'AI Multi-Agent Workspace',
+      category: 'Artificial Intelligence',
+      status: 'Personal Project',
+      summary:
+        'Workspace AI berbasis OpenClaw untuk membantu workflow software development.',
+      challenge:
+        'Mengotomatisasi proses planning, coding, QA, dan dokumentasi.',
+      approach:
+        'Mengintegrasikan OpenClaw, GPT, dan workflow agent.',
+      outcome:
+        'Workflow pengembangan menjadi lebih efisien.',
+      image: 'https://placehold.co/1200x800/F8FAFC/94A3B8?text=Portfolio+Preview'
+    },
+    {
+      slug: 'monitoring-dashboard',
+      title: 'Monitoring Dashboard',
+      category: 'Dashboard',
+      status: 'Case Study',
+      summary:
+        'Dashboard monitoring dengan visualisasi data, filter, dan export laporan.',
+      challenge:
+        'Menyajikan data operasional secara ringkas dan mudah dipahami.',
+      approach:
+        'Dashboard responsif dengan fokus pada performa dan usability.',
+      outcome:
+        'Membantu proses monitoring dan analisis data.',
+      image: 'https://placehold.co/1200x800/F8FAFC/94A3B8?text=Portfolio+Preview'
+    },
+    {
+      slug: 'company-profile-demo',
+      title: 'Company Profile Demo',
+      category: 'Website',
+      status: 'Demo Project',
+      summary:
+        'Contoh website company profile modern untuk berbagai jenis bisnis.',
+      challenge:
+        'Meningkatkan kredibilitas bisnis melalui tampilan profesional.',
+      approach:
+        'Desain modern, CTA yang jelas, dan SEO-friendly.',
+      outcome:
+        'Menjadi referensi bagi calon klien.',
+      image: 'https://placehold.co/1200x800/F8FAFC/94A3B8?text=Portfolio+Preview'
     }
   ]
 } as const
 
-export const findPortfolioItem = (slug: string) => portfolioContent.items.find((item) => item.slug === slug)
+export const findPortfolioItem = (slug: string) =>
+  portfolioContent.items.find((item) => item.slug === slug)
